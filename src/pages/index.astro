@@ -1,0 +1,39 @@
+---
+import Footer from "@/components/footer/Footer.astro";
+import Contact from "../components/contact/Contact.astro";
+import Divisor from "../components/divider/Divisor.astro";
+import Hero from "../components/hero/Hero.astro";
+import NavBar from "../components/navbar/NavBar.astro";
+import Services from "../components/ourServices/Services.astro";
+import "@/styles/globals.css";
+import Whatsapp from "@/components/whatsappButton/Whatsapp.astro";
+import Gallery from "@/components/gallery/Gallery.astro";
+import Testimonials from "@/components/testimonials/Testimonials.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <script
+      is:inline
+      src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"
+    ></script>
+
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body class="bg-sky-200">
+    <NavBar />
+    <Hero />
+    <Services />
+    <Divisor />
+    <Contact />
+    <Gallery />
+    <!--     <Testimonials />
+ -->
+    <Whatsapp />
+    <Footer />
+  </body>
+</html>
