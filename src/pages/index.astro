@@ -9,6 +9,8 @@ import "@/styles/globals.css";
 import Whatsapp from "@/components/whatsappButton/Whatsapp.astro";
 import Gallery from "@/components/gallery/Gallery.astro";
 import Testimonials from "@/components/testimonials/Testimonials.astro";
+import Network from "@/components/redes/Network.astro";
+import Layout from "@/layout/Layout.astro";
 ---
 
 <html lang="en">
@@ -22,18 +24,15 @@ import Testimonials from "@/components/testimonials/Testimonials.astro";
     ></script>
 
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Stef</title>
   </head>
   <body class="bg-sky-200">
-    <NavBar />
-    <Hero />
-    <Services />
-    <Divisor />
-    <Contact />
-    <Gallery />
-    <!--     <Testimonials />
- -->
-    <Whatsapp />
-    <Footer />
+    <Layout title="Stef-landingPage">
+      <Services />
+      <Divisor />
+      <Contact />
+      <Gallery />
+      <Network />
+    </Layout>
   </body>
 </html>
