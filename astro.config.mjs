@@ -7,5 +7,7 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [tailwind({
     applyBaseStyles: false,
-  }), react()]
+  }), react()],
+  output: "server",
+  site: "https://stef-landing.vercel.app",
 });

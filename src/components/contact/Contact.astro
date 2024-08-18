@@ -1,3 +1,10 @@
+---
+import ContactForm from "../contactForm/ContactForm.astro";
+
+
+
+---
+
 <section id="contact" class="bg-gray-100 py-16">
   <div class="container mx-auto px-6 lg:px-20">
     <div class="text-center mb-12">
@@ -28,11 +35,8 @@
       </div>
 
       <!-- Map or Image Placeholder -->
-      <div class="lg:w-1/2">
-        <div class="w-full h-64 bg-gray-200 flex items-center justify-center rounded-lg">
-          <img src="https://picsum.photos/500/250" alt="">
-        </div>
-      </div>
+      <div class="lg:w-1/2 w-full">
+        <ContactForm />
     </div>
   </div>
 </section>
