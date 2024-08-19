@@ -8,6 +8,5 @@ export default defineConfig({
   integrations: [tailwind({
     applyBaseStyles: false,
   }), react()],
-  output: "server",
-  site: "https://stef-landing.vercel.app",
+  output: "hybrid",
 });
