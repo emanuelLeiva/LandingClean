@@ -1,4 +1,8 @@
+---
+---
+
 <section class="text-center py-12 bg-sky-300">
+    
     <h2 class="text-3xl font-bold mb-8 text-gray-800">Contact us</h2>
 
     <!-- Alerta de éxito -->
@@ -47,50 +51,56 @@
 
 
 <script>
-const btn = document.getElementById('button');
-const form = document.getElementById('form');
-const successAlert = document.getElementById('success-alert');
-const errorAlert = document.getElementById('error-alert');
+    declare const emailjs: any;
 
-form.addEventListener('submit', function(event) {
-    event.preventDefault();
+const btn = document.getElementById('button') as HTMLButtonElement | null;
+const form = document.getElementById('form') as HTMLFormElement | null;
+const successAlert = document.getElementById('success-alert') as HTMLDivElement | null;
+const errorAlert = document.getElementById('error-alert') as HTMLDivElement | null;
+
+if (form && btn && successAlert && errorAlert) {
+    form.addEventListener('submit', function(event: Event) {
+        event.preventDefault();
 
     // Validación personalizada
-    const name = form.querySelector('[name="from_name"]');
-    const email = form.querySelector('[name="email_id"]');
-    const message = form.querySelector('[name="message"]');
 
     // Inicializar estado de error
     let hasError = false;
 
     // Validación del nombre
-    if (!name.value.trim()) {
-        document.getElementById('from_name_error').classList.remove('hidden');
-        hasError = true;
-    } else {
-        document.getElementById('from_name_error').classList.add('hidden');
-    }
+    const name = form.querySelector('[name="from_name"]') as HTMLInputElement | null;
+    if (name && !name.value.trim()) {
+            document.getElementById('from_name_error')?.classList.remove('hidden');
+            hasError = true;
+        } else {
+            document.getElementById('from_name_error')?.classList.add('hidden');
+        }
 
     // Validación del correo electrónico
-    if (!email.value.trim() || !validateEmail(email.value.trim())) {
-        document.getElementById('email_id_error').classList.remove('hidden');
-        hasError = true;
-    } else {
-        document.getElementById('email_id_error').classList.add('hidden');
-    }
+    const email = form.querySelector('[name="email_id"]') as HTMLInputElement | null;
+
+    if (email && (!email.value.trim() || !validateEmail(email.value.trim()))) {
+            document.getElementById('email_id_error')?.classList.remove('hidden');
+            hasError = true;
+        } else {
+            document.getElementById('email_id_error')?.classList.add('hidden');
+        }
 
     // Validación del mensaje
-    if (!message.value.trim()) {
-        document.getElementById('message_error').classList.remove('hidden');
-        hasError = true;
-    } else {
-        document.getElementById('message_error').classList.add('hidden');
-    }
+    const message = form.querySelector('[name="message"]') as HTMLTextAreaElement | null;
+
+    if (message && !message.value.trim()) {
+            document.getElementById('message_error')?.classList.remove('hidden');
+            hasError = true;
+        } else {
+            document.getElementById('message_error')?.classList.add('hidden');
+        }
 
     // Si hay errores, detener el envío
     if (hasError) {
-        return;
-    }
+            return;
+        }
+    
 
     // Si no hay errores, enviar el formulario
     btn.textContent = 'Sending...';
@@ -104,15 +114,17 @@ form.addEventListener('submit', function(event) {
             successAlert.classList.remove('hidden'); // Mostrar alerta de éxito
             errorAlert.classList.add('hidden'); // Ocultar alerta de error, si estuviera visible
             form.reset(); // Borrar lo escrito en los inputs
-        }, (err) => {
+        }, (err: any) => {
             btn.textContent = 'Send Email';
             errorAlert.classList.remove('hidden'); // Mostrar alerta de error
             successAlert.classList.add('hidden'); // Ocultar alerta de éxito, si estuviera visible
         });
 });
 
+}
+
 // Función para validar un email
-function validateEmail(email) {
+function validateEmail(email: string): boolean {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
 }
