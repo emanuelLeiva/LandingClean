@@ -5,7 +5,7 @@ import ContactForm from "../contactForm/ContactForm.astro";
 
 ---
 
-<section id="contact" class="bg-gray-100 py-16">
+<section id="contact" class="bg-[#fbd12d] lg:py-16 pb-4">
   <div class="container mx-auto px-6 lg:px-20">
     <div class="text-center mb-12">
       <h1 class="text-4xl font-bold text-gray-800">Contact Us</h1>
@@ -32,6 +32,15 @@ import ContactForm from "../contactForm/ContactForm.astro";
             <strong>Address:</strong> 1234 Street Name, City, State, 12345
           </li>
         </ul>
+
+        <!--- map location --->
+        <div class="mt-8 lg:mr-8 ">
+          
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64405.298989544004!2d-77.09851371100945!3d38.92501219130842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c6de5af6e45b%3A0xc2524522d4885d2a!2sWashington%20D.%20C.%2C%20Distrito%20de%20Columbia%2C%20EE.%20UU.!5e0!3m2!1ses-419!2sar!4v1724119826073!5m2!1ses-419!2sar" class="w-full h-64 lg:h-96 rounded-lg" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
+        </div>
+        
+
+
       </div>
 
       <!-- Map or Image Placeholder -->

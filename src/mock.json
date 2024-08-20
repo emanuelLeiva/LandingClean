@@ -1,0 +1,180 @@
+{
+  "sections": [
+    {
+      "id": 1,
+      "title": "Classic Cleaning",
+      "content": [
+        {
+          "title": "Limpieza general (todas las habitaciones)",
+          "items": [
+            "Limpiar el polvo de los muebles",
+            "Limpiar el polvo de aparatos grandes (p. ej., TV)",
+            "Limpiar el polvo a las lámparas",
+            "Limpiar el polvo a los interruptores de la luz",
+            "Barrer o pasar la aspiradora en los suelos",
+            "Vaciar papeleras / basureros"
+          ]
+        },
+        {
+          "title": "Dormitorio(s)",
+          "items": [
+            "Hacer las camas",
+            "Cambiar la ropa de cama (si se proporciona)",
+            "Limpiar el polvo del cabecero",
+            "Limpiar el polvo a las lámparas",
+            "Limpiar el polvo a los interruptores de la luz"
+          ]
+        },
+        {
+          "title": "Cuarto(s) de baño",
+          "items": [
+            "Espejo",
+            "Fregadero",
+            "Grifo",
+            "Encimeras",
+            "Inodoro/Escusado",
+            "Bañera/Ducha",
+            "Área de la ducha / Azulejos de alrededor / Suelos",
+            "Barra de la ducha / Puerta",
+            "Grifos / Controles",
+            "Toalleros"
+          ]
+        },
+        {
+          "title": "Cocina",
+          "items": [
+            "Encimeras",
+            "Fregadero",
+            "Grifo",
+            "Tapón/ Protector de salpicaduras / Azulejos del fregadero"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Signature Cleaning",
+      "content": [
+        {
+          "title": "Limpieza general (todas las habitaciones)",
+          "items": [
+            "Limpiar el polvo de los muebles",
+            "Limpiar el polvo de aparatos grandes (p. ej., TV)",
+            "Limpiar el polvo a las lámparas",
+            "Limpiar el polvo a los interruptores de la luz",
+            "Barrer o pasar la aspiradora en los suelos",
+            "Vaciar papeleras / basureros",
+            "Barrer los suelos (si es pertinente)"
+          ]
+        },
+        {
+          "title": "Dormitorio(s)",
+          "items": [
+            "Hacer las camas",
+            "Cambiar la ropa de cama (si se proporciona)",
+            "Limpiar el polvo del cabecero",
+            "Limpiar el polvo a las lámparas",
+            "Limpiar el polvo a los interruptores de la luz"
+          ]
+        },
+        {
+          "title": "Cuarto(s) de baño",
+          "items": [
+            "Espejo",
+            "Fregadero",
+            "Grifo",
+            "Encimeras",
+            "Inodoro/Escusado",
+            "Bañera/Ducha",
+            "Área de la ducha / Azulejos de alrededor / Suelos",
+            "Barra de la ducha / Puerta",
+            "Grifos / Controles",
+            "Toalleros"
+          ]
+        },
+        {
+          "title": "Cocina",
+          "items": [
+            "Encimeras",
+            "Fregadero",
+            "Grifo",
+            "Tapón / Protector de salpicaduras / Azulejos del fregadero",
+            "Cargar el lavavajillas (si ya está vacío)",
+            "Microondas (Interior y Exterior)",
+            "Horno / Fogones (Exterior)",
+            "Frigorífico / Refrigerator (Exterior)",
+            "Lavavajillas (Exterior)",
+            "Otros pequeños electrodomésticos (Exterior)",
+            "Armarios / Gabinetas (Exterior)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Signature Cleaning",
+      "content": [
+        {
+          "title": "Limpieza general (todas las habitaciones)",
+          "items": [
+            "Limpiar el polvo de los muebles",
+            "Limpiar el polvo de aparatos grandes (p. ej., TV)",
+            "Limpiar el polvo a las lámparas",
+            "Limpiar el polvo a los interruptores de la luz",
+            "Barrer o pasar la aspiradora en los suelos",
+            "Barrer los suelos (si es pertinente)",
+            "Limpiar el polvo de las persianas, colgantes de las paredes y decoración",
+            "Limpiar el polvo a los ventiladores del techo al alcance",
+            "Limpiar los zócalos",
+            "Limpiar el alféizar de las ventanas",
+            "Marcos de las puertas y puertas de cristal interiores",
+            "Pasar la aspiradora a los tapizados",
+            "Vaciar papeleras / basureros"
+          ]
+        },
+        {
+          "title": "Dormitorio(s)",
+          "items": [
+            "Hacer las camas",
+            "Cambiar la ropa de cama (si se proporciona)",
+            "Limpiar el polvo del cabecero",
+            "Limpiar el polvo a las lámparas",
+            "Limpiar el polvo a los interruptores de la luz"
+          ]
+        },
+        {
+          "title": "Cuarto(s) de baño",
+          "items": [
+            "Espejo",
+            "Fregadero",
+            "Grifo",
+            "Encimeras",
+            "Inodoro / Escusado",
+            "Bañera/Ducha",
+            "Área de la ducha / Azulejos de alrededor / Suelos",
+            "Barra de la ducha / Puerta",
+            "Grifos / Controles",
+            "Toalleros",
+            "Frotar los azulejos de la ducha y la lechada"
+          ]
+        },
+        {
+          "title": "Cocina",
+          "items": [
+            "Encimeras",
+            "Fregadero",
+            "Grifo",
+            "Tapón/Protector de salpicaduras / Azulejos del fregadero",
+            "Cargar el lavavajillas (si ya está vacío)",
+            "Microondas (Interior y Exterior)",
+            "Horno / Fogones (Exterior)",
+            "Frigorífico / Refrigerator (Exterior)",
+            "Lavavajillas (Exterior)",
+            "Otros pequeños electrodomésticos (Exterior)",
+            "Armarios / Gabinetas (Exterior)"
+          ]
+        }
+      ]
+    }
+  ]
+}

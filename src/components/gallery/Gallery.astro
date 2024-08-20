@@ -1,51 +1,30 @@
 ---
-
+const images = [
+  "./gale1.webp",
+  "./gale2.webp",
+  "./gale3.webp",
+  "./gale4.webp",
+  "./gale5.webp",
+  
+]
 ---
 
-<div id="gallery" class="relative w-full my-32 pb-0" data-carousel="slide">
-  <h2 class="text-4xl text-center py-8">Gallery of Works</h2>
+<div id="gallery" class="relative w-full h-full py-32  bg-[#fbd12d]" data-carousel="slide">
+  <h2 class="text-4xl font-semibold text-center pb-12">Gallery of Works</h2>
   <!-- Carousel wrapper -->
-  <div class="relative h-56 overflow-hidden rounded-lg md:h-96 p-4">
-    <!-- Item 1 -->
-    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-      <img
-        src="https://picsum.photos/800/860"
-        class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-        alt=""
-      />
-    </div>
-    <!-- Item 2 -->
-    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-      <img
-        src="https://picsum.photos/800/860"
-        class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-        alt=""
-      />
-    </div>
-    <!-- Item 3 -->
-    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-      <img
-        src="https://picsum.photos/800/860"
-        class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-        alt=""
-      />
-    </div>
-    <!-- Item 4 -->
-    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-      <img
-        src="https://picsum.photos/800/860"
-        class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-        alt=""
-      />
-    </div>
-    <!-- Item 5 -->
-    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-      <img
-        src="https://picsum.photos/800/860"
-        class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-        alt=""
-      />
-    </div>
+  <div class="relative md:w-[80%] lg:w-[80%] w-full h-[300px] mx-auto overflow-hidden rounded-lg md:h-[500px] lg:h-[500px] p-4">
+    {images.map((src, index) => (
+      <div
+        class={`hidden duration-700 ease-in-out ${index === 0 ? 'block' : ''}`}
+        data-carousel-item={index === 0 ? 'active' : ''}
+      >
+        <img
+          src={src}
+          class="absolute block max-w-full object-cover w-full  h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt={`Gallery item ${index + 1}`}
+        />
+      </div>
+    ))}
   </div>
   <!-- Slider controls -->
   <button

@@ -20,6 +20,9 @@ importers:
       '@astrojs/vercel':
         specifier: ^7.7.2
         version: 7.7.2(astro@4.14.2(rollup@4.20.0)(typescript@5.5.4))(react@18.3.1)
+      '@fontsource-variable/mulish':
+        specifier: ^5.0.20
+        version: 5.0.20
       '@radix-ui/react-accordion':
         specifier: ^1.2.0
         version: 1.2.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -401,6 +404,9 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource-variable/mulish@5.0.20':
+    resolution: {integrity: sha512-mEs52AjusiKwR34E/E2BntdAxpXtkZWlgck45PzKrttuONHHQBc0NBGvtWF/kMS2cC8zCDwZQz5971OWybSZBQ==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -3029,6 +3035,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.21.5':
     optional: true
+
+  '@fontsource-variable/mulish@5.0.20': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:

@@ -1,16 +1,21 @@
 ---
 
+
 ---
 
-<section>
-  <nav class="flex w-[80%] justify-between mx-auto py-9 items-center sticky">
-    <a href="/" class="flex gap-4"
-      ><img
-        src="https://dummyimage.com/150x150/000/fff&text=Stef"
-        class="h-10 w-10 rounded-full"
-        alt=""
-      /><p class="text-2xl">Cleaning Service</p></a
-    >
+<section class="bg-[#fe67c6]">
+  <nav class="flex w-[80%] justify-between mx-auto py-9 items-center sticky top-0  ">
+   <div class="flex flex-col justify-center text-center md:flex-row md:text-left md:gap-8 md:items-center md:justify-start ">
+
+     <a href="/" class="flex items-center justify-center" 
+     ><img
+     src="./StefLogo.webp"
+     class="lg:h-24 h-10 lg:w-24 w-10 rounded-full"
+     alt=""
+     /></a
+     >
+     <p class="lg:text-lg font-semibold text-lg">Cleaning Service</p>
+    </div>
     <div class="hidden md:flex gap-4">
       <a
         href="/"
@@ -62,7 +67,7 @@
 
   <div
     id="drawer-navigation"
-    class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-sky-200 w-64"
+    class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-[#fe67c6] w-64"
     tabindex="-1"
     aria-labelledby="drawer-navigation-label"
   >
@@ -233,4 +238,22 @@
       });
     });
   });
+
+  document.addEventListener("scroll", () => {
+    const navbar = document.querySelector("nav");
+    const scrollPoint = 300; // Cambia este valor al punto donde quieras que desaparezca
+
+    if (navbar) {
+      if (window.scrollY > scrollPoint) {
+        navbar.style.top = "-100px"; // Ajusta el valor para que el navbar se esconda fuera de la vista
+      } else {
+        navbar.style.top = "0"; // Muestra el navbar en la parte superior
+      }
+    }
+  });
 </script>
+
+<style>
+
+
+</style>
