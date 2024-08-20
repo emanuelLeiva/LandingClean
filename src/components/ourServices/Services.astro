@@ -1,14 +1,269 @@
 ---
-import Classic from "./classic/Classic.astro";
-import Premium from "./premium/Premium.astro";
-import Signature from "./signature/Signature.astro";
 
 
 ---
 
 <section id="services" class="lg:py-12 pb-4 bg-[#fe67c6]">
   <h1 class="text-3xl font-bold py-28 text-center" > Our Services</h1>
-  <Classic />
-  <!-- <Signature />
-  <Premium /> -->
+  
+  <style>
+    .hidden { display: none; }
+  </style>
+<section class="pb-8 bg-[#fe67c6]">
+  <div class="w-full max-w-4xl mx-auto">
+    <!-- Acordeón Principal -->
+    <div class="space-y-4">
+      <!-- Sección Classic -->
+      <div class="rounded-xl">
+        <button class="relative text-center overflow-hidden text-black shadow-2xl w-full px-4 py-2 text-xl font-semibold bg-[#fbd12d] transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-[#fe67c6] before:duration-300 before:ease-out hover:text-black hover:shadow-[#fbd12d] hover:before:h-40 hover:before:w-full hover:before:opacity-80" type="button" data-target="classic-content">
+         <span class="relative z-10"> Classic Cleaning </span>
+        </button>
+        <div id="classic-content" class="hidden p-4 bg-[#f9f9f9]">
+          <div class="space-y-4">
+            <!-- Subtítulos Classic -->
+            <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="classic-sub1">
+              Limpieza General
+            </button>
+            <div id="classic-sub1" class="hidden pl-4 mt-2 bg-white border border-gray-200 rounded-md">
+              <ul class=" pl-4 space-y-2 text-gray-800">
+                <li>Limpiar el polvo de los muebles</li>
+                <li>Limpiar el polvo de aparatos grandes (p. ej., TV)</li>
+                <li>Limpiar el polvo a las lámparas</li>
+                <li>Limpiar el polvo a los interruptores de la luz</li>
+                <li>Barrer o pasar la aspiradora en los suelos</li>
+                <li>Vaciar papeleras / basureros</li>
+              </ul>
+            </div>
+      
+            <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="classic-sub2">
+              Dormitorio(s)
+            </button>
+            <div id="classic-sub2" class="hidden pl-4 mt-2 bg-white border border-gray-200 rounded-md">
+              <ol class=" pl-4 space-y-2 text-gray-800">
+                <li>Hacer las camas</li>
+                <li>Cambiar la ropa de cama (si se proporciona)</li>
+                <li>Limpiar el polvo del cabecero</li>
+                <li>Limpiar el polvo a las lámparas</li>
+                <li>Limpiar el polvo a los interruptores de la luz</li>
+              </ol>
+            </div>
+      
+            <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="classic-sub3">
+              Cuarto(s) de baño
+            </button>
+            <div id="classic-sub3" class="hidden pl-4 mt-2 bg-white border border-gray-200 rounded-md">
+              <ol class=" pl-4 space-y-2 text-gray-800">
+                <li>Espejo</li>
+                <li>Fregadero</li>
+                <li>Grifo</li>
+                <li>Encimeras</li>
+                <li>Inodoro / Escusado</li>
+                <li>Bañera/Ducha</li>
+                <li>Área de la ducha / Azulejos de alrededor / Suelos</li>
+                <li>Barra de la ducha / Puerta</li>
+                <li>Grifos / Controles</li>
+                <li>Toalleros</li>
+              </ol>
+            </div>
+      
+            <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="classic-sub4">
+              Cocina
+            </button>
+            <div id="classic-sub4" class="hidden pl-4 mt-2 bg-white border border-gray-200 rounded-md">
+              <ol class=" pl-4 space-y-2 text-gray-800">
+                <li>Encimeras</li>
+                <li>Fregadero</li>
+                <li>Grifo</li>
+                <li>Tapón / Protector de salpicaduras / Azulejos del fregadero</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- Sección Signature -->
+      <div class=" rounded-xl">
+        <button class="relative text-center overflow-hidden text-black shadow-2xl w-full px-4 py-2 text-xl font-semibold bg-[#fbd12d] transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-[#fe67c6] before:duration-300 before:ease-out hover:text-black hover:shadow-[#fbd12d] hover:before:h-40 hover:before:w-full hover:before:opacity-80" type="button" data-target="signature-content">
+         <span class="relative z-10">
+          Signature Cleaning
+         </span>
+        </button>
+        <div id="signature-content" class="hidden p-4">
+          <div class="space-y-2">
+            <!-- Subtítulos Signature -->
+            <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="signature-sub1">
+              Limpieza General
+            </button>
+            <div id="signature-sub1" class="hidden pl-4">
+              <ul class=" pl-4">
+                <li>Limpiar el polvo de los muebles</li>
+                <li>Limpiar el polvo de aparatos grandes (p. ej., TV)</li>
+                <li>Limpiar el polvo a las lámparas</li>
+                <li>Limpiar el polvo a los interruptores de la luz</li>
+                <li>Barrer o pasar la aspiradora en los suelos</li>
+                <li>Vaciar papeleras / basureros</li>
+                <li>Barrer los suelos (si es pertinente)</li>
+              </ul>
+            </div>
+      
+            <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="signature-sub2">
+              Dormitorio(s)
+            </button>
+            <div id="signature-sub2" class="hidden pl-4">
+              <ul class=" pl-4">
+                <li>Hacer las camas</li>
+                <li>Cambiar la ropa de cama (si se proporciona)</li>
+                <li>Limpiar el polvo del cabecero</li>
+                <li>Limpiar el polvo a las lámparas</li>
+                <li>Limpiar el polvo a los interruptores de la luz</li>
+              </ul>
+            </div>
+      
+            <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="signature-sub3">
+              Cuarto(s) de baño
+            </button>
+            <div id="signature-sub3" class="hidden pl-4">
+              <ul class=" pl-4">
+                <li>Espejo</li>
+                <li>Fregadero</li>
+                <li>Grifo</li>
+                <li>Encimeras</li>
+                <li>Inodoro/Escusado</li>
+              </ul>
+            </div>
+      
+            <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="signature-sub4">
+              Bañera/Ducha
+            </button>
+            <div id="signature-sub4" class="hidden pl-4">
+              <ul class=" pl-4">
+                <li>Área de la ducha / Azulejos de alrededor / Suelos</li>
+                <li>Barra de la ducha / Puerta</li>
+                <li>Grifos / Controles</li>
+                <li>Toalleros</li>
+              </ul>
+            </div>
+      
+            <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="signature-sub5">
+              Cocina
+            </button>
+            <div id="signature-sub5" class="hidden pl-4">
+              <ul class=" pl-4">
+                <li>Encimeras</li>
+                <li>Fregadero</li>
+                <li>Grifo</li>
+                <li>Tapón / Protector de salpicaduras / Azulejos del fregadero</li>
+                <li>Cargar el lavavajillas (si ya está vacío)</li>
+                <li>Microondas (Interior y Exterior)</li>
+                <li>Horno / Fogones (Exterior)</li>
+                <li>Frigorífico / Refrigerator (Exterior)</li>
+                <li>Lavavajillas (Exterior)</li>
+                <li>Otros pequeños electrodomésticos (Exterior)</li>
+                <li>Armarios / Gabinetas (Exterior)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Sección Premium -->
+      <div class="rounded-xl">
+        <button class="relative text-center overflow-hidden text-black shadow-2xl w-full px-4 py-2 text-xl font-semibold bg-[#fbd12d] transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-[#fe67c6] before:duration-300 before:ease-out hover:text-black hover:shadow-[#fbd12d] hover:before:h-40 hover:before:w-full hover:before:opacity-80" type="button" data-target="premium-content">
+         <span class="relative z-10">
+           Premium Cleaning
+          </span>
+        </button>
+        <div id="premium-content" class="hidden p-4">
+          <div class="space-y-2">
+            <!-- Subtítulos Premium -->
+            <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="premium-sub1">
+limpieza general            </button>
+            <div id="premium-sub1" class="hidden pl-4">
+              <ul class=" pl-4">
+                <li>Limpiar el polvo de los muebles</li>
+          <li>Limpiar el polvo de aparatos grandes (p. ej., TV)</li>
+          <li>Limpiar el polvo a las lámparas</li>
+          <li>Limpiar el polvo a los interruptores de la luz</li>
+          <li>Barrer o pasar la aspiradora en los suelos</li>
+          <li>Barrer los suelos (si es pertinente)</li>
+          <li>Limpiar el polvo de las persianas, colgantes de las paredes y decoración</li>
+          <li>Limpiar el polvo a los ventiladores del techo al alcance</li>
+          <li>Limpiar los zócalos</li>
+          <li>Limpiar el alféizar de las ventanas</li>
+          <li>Marcos de las puertas y puertas de cristal interiores</li>
+          <li>Pasar la aspiradora a los tapizados</li>
+          <li>Vaciar papeleras / basureros</li>
+              </ul>
+            </div>
+
+            <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="premium-sub2">
+              Dormitorio
+            </button>
+            <div id="premium-sub2" class="hidden pl-4">
+              <ul class=" pl-4">
+                <li>Hacer las camas</li>
+                <li>Cambiar la ropa de cama (si se proporciona)</li>
+                <li>Limpiar el polvo del cabecero</li>
+                <li>Limpiar el polvo a las lámparas</li>
+                <li>Limpiar el polvo a los interruptores de la luz</li>
+              </ul>
+            </div>
+
+            <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="premium-sub3">
+              Cuarto(s) de baño            </button>
+            <div id="premium-sub3" class="hidden pl-4">
+              <ul class=" pl-4">
+                <li>Espejo</li>
+                <li>Fregadero</li>
+                <li>Grifo</li>
+                <li>Encimeras</li>
+                <li>Inodoro / Escusado</li>
+                <li>Bañera/Ducha</li>
+                <li>Área de la ducha / Azulejos de alrededor / Suelos</li>
+                <li>Barra de la ducha / Puerta</li>
+                <li>Grifos / Controles</li>
+                <li>Toalleros</li>
+                <li>Frotar los azulejos de la ducha y la lechada</li>
+              </ul>
+            </div>
+
+            <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="premium-sub4">
+              Cocina
+            </button>
+            <div id="premium-sub4" class="hidden pl-4">
+              <ul class=" pl-4">
+                <li>Encimeras</li>
+                <li>Fregadero</li>
+                <li>Grifo</li>
+                <li>Tapón/Protector de salpicaduras / Azulejos del fregadero</li>
+                <li>Cargar el lavavajillas (si ya está vacío)</li>
+                <li>Microondas (Interior y Exterior)</li>
+                <li>Horno / Fogones (Exterior)</li>
+                <li>Frigorífico/Refrigerator (Exterior)</li>
+                <li>Lavavajillas (Exterior)</li>
+                <li>Otros pequeños electrodomésticos (Exterior)</li>
+                <li>Armarios / Gabinetas (Exterior)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Función para manejar el acordeón
+    const accordions = document.querySelectorAll('button[data-target]');
+    accordions.forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-target') as string;
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.classList.toggle('hidden');
+        }
+      });
+    });
+  });
+</script>
