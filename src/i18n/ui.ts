@@ -10,7 +10,7 @@ export const languages: Record<string, { code: string; name: string }> = {
   },
 };
 
-export const defaultLang = "es";
+export const defaultLang = "en";
 export const showDefaultLang = false;
 
 export const ui = {

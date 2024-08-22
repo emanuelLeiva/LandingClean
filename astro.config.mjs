@@ -11,7 +11,7 @@ export default defineConfig({
     locales: ["en", "es"],
   },
   routing: {
-    prefixDefaultLocale: true // en -> / | es  -> /es
+    prefixDefaultLocale: false // en -> / | es  -> /es
 },
 
   integrations: [tailwind({
