@@ -6,8 +6,15 @@ import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "es"],
+  },
+  routing: {
+    prefixDefaultLocale: true // en -> / | es  -> /es
+},
+
   integrations: [tailwind({
-    applyBaseStyles: false
   }), react()],
   output: "hybrid",
   adapter: vercel()

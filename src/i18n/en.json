@@ -1,0 +1,198 @@
+{
+  "navbar": {
+    "p": "Cleaning Service",
+    "home": "Home",
+    "services": "Services",
+    "about": "About us",
+    "contact": "Contact "
+  },
+  "hero": {
+    "herop": "At",
+    "heropp": "we specialise in providing deep and complete cleaning. Our team of experts takes care of everything from offices and residences to industrial and commercial spaces. We leave no corner unattended and no detail uncared for.",
+    "herop1": "We use high-quality products and techniques to ensure that every space is spotless, providing a clean and safe environment. Whether you need deep cleaning, regular maintenance or specialized services, we are here to cover all your needs.",
+    "herop2": "We pride ourselves on adapting to each client's unique demands, exceeding your expectations with exceptional results.",
+    "herop3": "Trust Stef for unparalleled cleaning. We take care of everything for you!"
+  },
+  "services": {
+    "title": "Our services",
+    "subtitle": "Personalized Services for Every Household Need",
+    "classic": {
+      "title": "Classic cleaning",
+      "subtitle": "general cleaning",
+      "li1": "Dusting furniture",
+      "li2": "Dusting large appliances (e.g. TV)",
+      "li3": "Dusting lamps",
+      "li4": "Dusting light switches",
+      "li5": "Sweeping or vacuuming floors",
+      "li6": "Emptying trash bins",
+
+      "subtitle2": "bedroom(s)",
+      "li7": "Make beds",
+      "li8": "Change linens (if provided)",
+      "li9": "Dust headboard",
+      "li10": "Dust lamps",
+      "li11": "Dust light switches",
+
+      "subtitle3": "bathroom(s)",
+      "li12": "Mirror",
+      "li13": "Sink",
+      "li14": "Faucet",
+      "li15": "Countertops",
+      "li16": "Toilet",
+      "li17": "Tub/Shower",
+      "li18": "Shower area / Surrounding tiles / Floors",
+      "li19": "Shower rod / Door",
+      "li20": "Faucets / Controls",
+      "li21": "Towel Racks",
+
+      "subtitle4": "kitchen",
+      "li22": "countertops",
+      "li23": "Sink",
+      "li24": "faucet",
+      "li25": "Sink Stopper / Splash Guard / Tiles"
+    },
+    "signature": {
+      "title": "Signature cleaning",
+
+      "subtitle": "general cleaning",
+      "li26": "Dust furniture",
+      "li27": "Dust large appliances (e.g. TV)",
+      "li28": "Dust curtains",
+      "li29": "Dust light switches",
+      "li30": "Sweep or vacuum floors",
+      "li31": "Empty trash bins",
+      "li32": "Empty trash bins",
+
+      "subtitle2": "bedroom(s)",
+      "li33": "Make beds",
+      "li34": "Change bedding (if provided)",
+      "li35": "Dust headboard",
+      "li36": "Dust curtains",
+      "li37": "Dust the light switches",
+
+      "subtitle3": "bathroom(s)",
+      "li38": "Mirror",
+      "li39": "sink",
+      "li40": "faucet",
+      "li41": "countertops",
+      "li42": "toilet",
+
+      "subtitle4": "tub/shower",
+      "li43": "Shower area / Surrounding tiles / Floors",
+      "li44": "Shower rod / Door",
+      "li45": "Faucets / Controls",
+      "li46": "Towel racks",
+
+      "subtitle5": "kitchen",
+      "li47": "countertops",
+      "li48": "Sink",
+      "li49": "faucet",
+      "li50": "Sink stopper / Splash guard / Tiles",
+      "li51": "Load the dishwasher (if already installed) is empty)",
+      "li52": "Microwave (Indoor and Outdoor)",
+      "li53": "Oven / Stove (Outdoor)",
+      "li54": "Refrigerator (Outdoor)",
+      "li55": "Dishwasher (Outdoor)",
+      "li56": "Other small appliances (Outdoor)",
+      "li57": "Wardrobes / Cabinets (Outdoor)"
+    },
+    "premium": {
+      "title": "Premium Cleaning",
+
+      "subtitle": "General Cleaning",
+      "li26": "Dust Furniture",
+      "li27": "Dust Large Appliances (e.g. TV)",
+      "li28": "Dust Light Fixtures",
+      "li29": "Dust Light Switches",
+      "li30": "Sweep or Vacuum Floors",
+      "li31": "Sweep Floors (if applicable)",
+      "li32": "Dust Blinds, Wall Hangings, and Decor",
+      "li33": "Dust Ceiling Fans Within Reach",
+      "li34": "Clean Baseboards",
+      "li35": "Clean Window Sills",
+      "li36": "Door Frames and Interior Glass Doors",
+      "li37": "Vacuum upholstery",
+      "li38": "Empty trash cans",
+
+      "subtitle1": "Bedroom",
+      "li39": "Make beds",
+      "li40": "Change bedding (if provided)",
+      "li41": "Dust headboard",
+      "li42": "Dust lamps",
+      "li43": "Dust light switches",
+
+      "subtitle2": "Bathroom(s)",
+      "li44": "Mirror",
+      "li45": "Sink",
+      "li46": "Faucet",
+      "li47": "Countertops",
+      "li48": "Toilet",
+      "li49": "Tub/Shower",
+      "li50": "Shower area / Surrounding tiles / Floors",
+      "li51": "Shower Rod / Door",
+      "li52": "Faucets / Controls",
+      "li53": "Towel Bars",
+      "li54": "Scrub Shower Tiles and Grout",
+
+      "subtitle3": "Kitchen",
+      "li55": "Countertops",
+      "li56": "Sink",
+      "li57": "Faucet",
+      "li58": "Sink Stopper / Splash Guard / Tiles",
+      "li59": "Load Dishwasher (if already empty)",
+      "li60": "Microwave (Indoor and Outdoor)",
+      "li61": "Oven / Stovetop (Outdoor)",
+      "li62": "Refrigerator (Outdoor)",
+      "li63": "Dishwasher (Outdoor)",
+      "li64": "Other Small Appliances (Outdoor)",
+      "li65": "Cabinet / Cabinets (Outdoor)"
+    }
+  },
+
+  "gallery": {
+    "title": "Gallery of Works",
+    "subtitle": "Transformations of Spaces that Speak for Themselves",
+    "prev": "Previous",
+    "next": "Next"
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "We're here to help and answer any question you might have. We look forward to hearing from you.",
+    "contact": "Get in Touch",
+    "description": "Feel free to reach out to us by phone, email, or visit us at our office.",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address"
+  },
+  "contactForm": {
+    "title": "Contact us",
+    "name": "Name",
+    "pname": "Enter your name",
+
+    "email": "Email",
+    "pemail": "Enter your email",
+
+    "message": "Message",
+    "pmessage": "Write your message",
+
+    "submit": "Send Message"
+  },
+  "alert": {
+    "success": "Your message has been sent. Thank you!",
+    "fail": "Your message could not be sent. Please try again later."
+  },
+  "testimonial": {
+    "title": "Testimonial",
+    "text": "The service was amazing! I've never seen my house so clean. They showed up on time, were super friendly, and left everything spotless. Now I can enjoy my home without worrying about cleaning. I highly recommend them if you're looking for a reliable service.",
+    "name": "Maria G., Homeowner",
+    "occupation": "Residential Customer Testimonial",
+
+    "text2": "We hired them for our office, and we're really happy with the results. They're thorough, always attentive to what we need, and the customer service is top-notch! Our employees and clients have noticed the difference since we started working with them.",
+    "name2": "Luis R., Office Manager",
+    "occupation2": "Corporate Customer Testimonial",
+
+    "text3": "After a renovation, we needed a deep clean, and these guys did an awesome job. Not only did they leave everything looking brand new, but they also used eco-friendly products, which is a big plus for us. They're quick, friendly, and super professional. We've already got them on our list for next time!",
+    "name3": "Andrea S., Homeowner",
+    "occupation3": "Occupation"
+  }
+}

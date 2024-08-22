@@ -1,54 +1,45 @@
 ---
+const images = [
+  "/producto1.webp",
+  "/producto2.webp",
+  "/producto3.webp",
+  "/producto4.webp",
+  "/producto5.webp",
+  "/producto6.webp",
+  "/producto7.webp",
+  "/producto8.webp",
+  "/producto9.webp",
+  "/producto10.webp",
+  "/producto11.webp",
+  "/producto12.webp",
+  "/producto13.webp",
+  "/producto14.webp",
+  "/producto15.webp",
+  "/producto16.webp",
+  "/producto17.webp",
+  "/producto18.webp",
+  "/producto19.webp",
+  "/producto20.webp",
+  "/producto21.webp",
+  "/producto22.webp",
+];
 
 ---
 
-<div class="relative bg-white h-40 justify-center overflow-hidden lg:pt-4 pt-8 mb-8 lg:mb-0">
-  <div class="flex animate-scroll space-x-28">
-    <img src="/producto1.webp" alt="Logo 1" class="h-32   hover:animate-pulse" />
-    <img src="/StefLogo.webp" alt="Logo 5" class="h-32 rounded-full" />
-    <img src="/producto2.webp" alt="Logo 2" class="h-32 hover:animate-pulse" />
-    <img src="/StefLogo.webp" alt="Logo 5" class="h-32 rounded-full" />
-    <img src="/producto3.webp" alt="Logo 3" class="h-32 hover:animate-pulse" />
-    <img src="/StefLogo.webp" alt="Logo 5" class="h-32 rounded-full" />
-    <img src="/producto4.webp" alt="Logo 4" class="h-32 hover:animate-pulse" />
-    <img src="/StefLogo.webp" alt="Logo 5" class="h-32 rounded-full" />
-    <img src="/producto5.webp" alt="Logo 5" class="h-32 hover:animate-pulse" />
-    <img src="/StefLogo.webp" alt="Logo 5" class="h-32 rounded-full" />
-    <img src="/producto6.webp" alt="Logo 5" class="h-32 hover:animate-pulse" />
-    <img src="/StefLogo.webp" alt="Logo 5" class="h-32 rounded-full" />
-    <img src="/producto7.webp" alt="Logo 5" class="h-32 hover:animate-pulse" />
-    <img src="/StefLogo.webp" alt="Logo 5" class="h-32 rounded-full" />
-    <img src="/producto8.webp" alt="Logo 5" class="h-32 hover:animate-pulse" />
-    <img src="/StefLogo.webp" alt="Logo 5" class="h-32 rounded-full" />
-    <img src="/producto9.webp" alt="Logo 5" class="h-32 hover:animate-pulse" />
-    <img src="/StefLogo.webp" alt="Logo 5" class="h-32 rounded-full" />
-    <img src="/producto10.webp" alt="Logo 5" class="h-32 hover:animate-pulse" />
-    <img src="/StefLogo.webp" alt="Logo 5" class="h-32 rounded-full" />
-    <img src="/producto11.webp" alt="Logo 5" class="h-32 hover:animate-pulse" />
-    <img src="/StefLogo.webp" alt="Logo 5" class="h-32 rounded-full" />
-    <img src="/producto12.webp" alt="Logo 5" class="h-32 hover:animate-pulse" />
-    <img src="/StefLogo.webp" alt="Logo 5" class="h-32 rounded-full" />
-    <img src="/producto13.webp" alt="Logo 5" class="h-32 hover:animate-pulse" />
-    <img src="/StefLogo.webp" alt="Logo 5" class="h-32 rounded-full" />
-    <img src="/producto14.webp" alt="Logo 5" class="h-32 hover:animate-pulse" />
-    <img src="/StefLogo.webp" alt="Logo 5" class="h-32 rounded-full" />
-    <img src="/producto15.webp" alt="Logo 5" class="h-32 hover:animate-pulse" />
-    <img src="/StefLogo.webp" alt="Logo 5" class="h-32 rounded-full" />
-    <img src="/producto16.webp" alt="Logo 5" class="h-32 hover:animate-pulse" />
-    <img src="/StefLogo.webp" alt="Logo 5" class="h-32 rounded-full" />
-    <img src="/producto17.webp" alt="Logo 5" class="h-32 hover:animate-pulse" />
-    <img src="/StefLogo.webp" alt="Logo 5" class="h-32 rounded-full" />
-    <img src="/producto18.webp" alt="Logo 5" class="h-32 hover:animate-pulse" />
-    <img src="/StefLogo.webp" alt="Logo 5" class="h-32 rounded-full" />
-    <img src="/producto19.webp" alt="Logo 5" class="h-32 hover:animate-pulse" />
-    <img src="/StefLogo.webp" alt="Logo 5" class="h-32 rounded-full" />
-    <img src="/producto20.webp" alt="Logo 5" class="h-32 hover:animate-pulse" />
-    <img src="/StefLogo.webp" alt="Logo 5" class="h-32 rounded-full" />
-    <img src="/producto21.webp" alt="Logo 5" class="h-32 hover:animate-pulse" />
-    <img src="/StefLogo.webp" alt="Logo 5" class="h-32 rounded-full" />
-    <img src="/producto22.webp" alt="Logo 5" class="h-32 hover:animate-pulse" />
-  </div>
-</div>
+
+    <div class="relative bg-white decoration-none h-40 justify-center overflow-hidden lg:pt-4 py-8 lg:mb-0">
+      <div class="flex animate-scroll space-x-28">
+        {images.map((src, index) => (
+          <img
+            src={src}
+            alt={`Logo ${index + 1}`}
+            class="h-32 w-32 object-cover object-center py-2"
+          />
+        ))}
+      </div>
+    </div>
+
+
 
 <style>
   @keyframes scroll {

@@ -1,0 +1,15 @@
+---
+import { languages } from '../i18n/ui';
+---
+<div class="flex justify-center">
+
+<ul class="flex space-x-2">
+  {Object.entries(languages).map(([lang, label]) => (
+    <li  class="">
+              <a class="flex items-center justify-center w-6 h-6 rounded-lg text-white hover:text-black bg-[#e6a6ce] hover:bg-[#e7d486] transition-colors duration-300 ease-in-out p-4 text-center" href={`/${lang}/`}>
+                {label.name.substring(0, 2)}</a>
+    </li>
+  ))}
+</ul>
+
+</div>

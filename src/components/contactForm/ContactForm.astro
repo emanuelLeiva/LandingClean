@@ -1,49 +1,64 @@
 ---
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../../i18n/utils';
+
+
+import { getI18N } from "@/i18n";
+import LanguagePicker from "../LanguagePicker.astro";
+
+
+
+
+const  { currentLocale = 'en' } = Astro
+const i18n = getI18N({currentLocale});
 ---
 
-<section class="text-center py-12 bg-sky-300">
+<section class="text-center px-8 py-4 rounded-3xl bg-[#e6a6ce]">
     
-    <h2 class="text-3xl font-bold mb-8 text-gray-800">Contact us</h2>
+    <h2 class="lg:text-3xl text-2xl font-bold my-4 text-black">{i18n?.contact.title}</h2>
 
     <!-- Alerta de éxito -->
     <div id="success-alert" class="hidden flex items-center p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
         <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
         </svg>
-        <div>
-            <span class="font-medium">Success alert!</span> Mail enviado correctamente, nos pondremos en contacto contigo.
+        <div class="text-sm ">
+            {i18n?.alert.success}
         </div>
     </div>
 
     <!-- Alerta de error -->
-    <div id="error-alert" class="hidden flex items-center p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+    <div id="error-alert" class="hidden flex items-center p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 " role="alert">
         <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
         </svg>
         <div>
-            <span class="font-medium">Error alert!</span> Temporary error, please try again later.
+             {i18n?.alert.fail}
         </div>
     </div>
 
-    <form id="form" class="w-full h-full mx-auto bg-sky-300  rounded-lg p-8">
+    <form id="form" class="w-full h-full mx-auto bg-[#e6a6ce]  rounded-lg px-8 py-4">
         <div class="mb-6">
-            <label for="from_name" class="block text-gray-700 font-bold mb-2">Your Name</label>
-            <input type="text" name="from_name" id="from_name" placeholder="Enter your name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" >
-            <small id="from_name_error" class="text-red-500 hidden">Please enter your name.</small>
+            <label for="from_name" class="block text-gray-700 font-bold mb-2">{i18n?.contactForm.name}</label>
+            <input type="text" name="from_name" id="from_name" placeholder={i18n?.contactForm.pname} class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#fbd12d]" >
+            <small id="from_name_error" class="text-red-500 hidden">{i18n?.contactForm.pname}</small>
         </div>
 
         <div class="mb-6">
-            <label for="email_id" class="block text-gray-700 font-bold mb-2">Your Email</label>
-            <input type="email" name="email_id" id="email_id" placeholder="Enter your email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" >
-            <small id="email_id_error" class="text-red-500 hidden">Please enter a valid email address.</small>
+            <label for="email_id" class="block text-gray-700 font-bold mb-2">{i18n?.contactForm.email}</label>
+            <input type="email" name="email_id" id="email_id" placeholder={i18n?.contactForm.pemail} class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#fbd12d]" >
+            <small id="email_id_error" class="text-red-500 hidden">Please {i18n?.contactForm.pemail}</small>
         </div>
        
         <div class="mb-6">
-            <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
-            <textarea name="message" id="message" rows="4" placeholder="Write your message" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" ></textarea>
-            <small id="message_error" class="text-red-500 hidden">Please write a message.</small>
+            <label for="message" class="block text-gray-700 font-bold mb-2">{i18n?.contactForm.message}</label>
+            <textarea name="message" id="message" rows="4" placeholder={i18n?.contactForm.pmessage} class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#fbd12d]" ></textarea>
+            <small id="message_error" class="text-red-500 hidden">Please {i18n?.contactForm.pmessage}</small>
         </div>
-        <button type="submit" id="button" class="w-full bg-blue-500 text-white font-bold py-3 rounded-lg hover:bg-blue-600 transition-colors">Send Email</button>
+        <button type="submit" id="button" class="relative text-center overflow-hidden text-black shadow-2xl w-full rounded-t-md px-4 py-2 text-xl font-semibold bg-[#e7d486] transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-[#fe67c6] before:duration-300 before:ease-out hover:text-black hover:shadow-[#fbd12d] hover:before:h-40 hover:before:w-full hover:before:opacity-80">
+        <span class="relative z-10">    
+        {i18n?.contactForm.submit}
+        </span>
+    </button>
     </form>
 </section>
 

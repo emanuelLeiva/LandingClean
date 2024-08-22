@@ -1,14 +1,38 @@
-<section
-<section class="py-16 flex items-center justify-center mx-auto w-full min-h-screen relative bg-cover bg-center bg-no-repeat" style="background-image: url('./hero.webp');">
->
-  <div
-    class="flex mx-auto text-center lg:px-8 bg-black/20 lg:bg-white/80 lg:w-3/4 xl:w-1/2 lg:h-3/4 xl:h-1/2 w-full h-auto justify-center pt-16 lg:pt-10 p-8 lg:rounded-md relative"
-  >
-    <div class="text-center flex flex-col text-black relative z-10">
-      <h1 class="lg:text-4xl text-5xl font-bold mb-4">Stef</h1>
-      <p class="text-sm md:text-base lg:text-lg text-gray-600">
-        Rest in a perfect home. Quality services at your disposal.
-      </p>
+---
+import { getI18N } from "@/i18n";
+
+const  { currentLocale = 'en' } = Astro
+const i18n = getI18N({currentLocale});
+---
+
+<section class="py-16 flex items-center justify-center mx-auto w-full min-h-screen relative bg-cover bg-center bg-no-repeat" style="background-image: url('/hero.webp');">
+  <div class="flex mx-auto text-center lg:px-8 bg-black/20 lg:bg-white/80 lg:w-3/4 xl:w-2/3 lg:h-3/4 xl:h-1/2 w-full h-auto justify-center pt-16 lg:pt-10 p-8 lg:rounded-lg relative shadow-lg">
+   
+    <!-- Sección para el texto en columnas -->
+    <div class="flex flex-col lg:flex-row lg:gap-12 gap-8 mt-8">
+      <!-- Columna 1 -->
+      <div class="flex-1 p-6 bg-[#e6a6ce] bg-opacity-80  shadow-md rounded-lg">
+        <p class="text-gray-800 leading-relaxed">
+         {i18n?.hero.herop} <span class="text-[#fbd12d] font-bold text-3xl bg-[#e6a6ce] px-2 rounded-md">Stef</span> {i18n?.hero.heropp}
+        </p>
+      </div>
+      <!-- Columna 2 -->
+      <div class="flex-1 p-6 bg-[#e6a6ce] bg-opacity-80 shadow-md rounded-lg">
+        <p class="text-gray-800 leading-relaxed">
+          {i18n?.hero.herop1}</p>
+      </div>
+      <!-- Columna 3 -->
+      <div class="flex-1 p-6 bg-[#e6a6ce] bg-opacity-80 shadow-md rounded-lg">
+        <p class="text-gray-800 leading-relaxed">
+         {i18n?.hero.herop2}
+         <br>
+        <span class="text-[#fbd12d] font-bold text-lg bg-[#e6a6ce] px-2 rounded-md">
+          {i18n?.hero.herop3}
+          </span> 
+        </p>
+        
+        
+      </div>
     </div>
   </div>
 </section>

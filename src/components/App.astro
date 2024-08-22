@@ -1,0 +1,33 @@
+---
+import Layout from "@/layout/Layout.astro";
+import '@fontsource-variable/mulish';
+import "@/styles/globals.css";
+import NavBar from "./navbar/NavBar.astro";
+import Hero from "../components/hero/Hero.astro";
+import Divisor from "../components/divider/Divisor.astro";
+import Services from "../components/ourServices/Services.astro";
+import Gallery from "@/components/gallery/Gallery.astro";
+import Contact from "../components/contact/Contact.astro";
+import Testimonial from "@/components/testimonial/Testimonial.astro";
+import Footer from "./footer/Footer.astro";
+
+import { getI18N } from "../i18n";
+
+
+const  { currentLocale = 'en' } = Astro
+const i18n = getI18N({currentLocale});
+---
+
+
+    <Layout title="Stef-Cleaning">
+      <NavBar />
+      <Hero />
+      <Divisor />
+      <Services />
+      <Gallery />
+      <Contact />
+      <Testimonial />
+      <Footer />
+    </Layout>
+    
+

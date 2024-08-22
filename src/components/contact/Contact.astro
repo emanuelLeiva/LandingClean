@@ -1,42 +1,47 @@
 ---
 import ContactForm from "../contactForm/ContactForm.astro";
 
+import { getI18N } from "@/i18n";
 
+const  { currentLocale = 'en' } = Astro
+const i18n = getI18N({currentLocale});
 
 ---
 
-<section id="contact" class="bg-[#fbd12d] lg:py-16 pb-4">
+<section id="contact" class="bg-[#e7d486] lg:py-16 pb-4">
+  <div class="w-[90%] h-1 mx-auto bg-[#e6a6ce] opacity-50 mb-32" ></div>
+
   <div class="container mx-auto px-6 lg:px-20">
     <div class="text-center mb-12">
-      <h1 class="text-4xl font-bold text-gray-800">Contact Us</h1>
+      <h1 class="text-4xl font-bold text-gray-800">{i18n?.contact.title}</h1>
       <p class="text-gray-600 mt-4">
-        We're here to help and answer any question you might have. We look forward to hearing from you.
+        {i18n?.contact.subtitle}
       </p>
     </div>
 
     <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center">
       <!-- Contact Info -->
       <div class="lg:w-1/2 mb-8 lg:mb-0">
-        <h2 class="text-2xl font-semibold text-gray-800">Get in Touch</h2>
-        <p class="text-gray-600 mt-4 mb-8">
-          Feel free to reach out to us by phone, email, or visit us at our office.
+        <h2 class="text-2xl text-center font-semibold text-gray-800">{i18n?.contact.contact}</h2>
+        <p class="text-gray-600 text-center mt-4 mb-8">
+          {i18n?.contact.description}
         </p>
         <ul class="text-gray-600">
           <li class="mb-4">
-            <strong>Phone:</strong> xxx-xxx-xxxx
+            <strong>{i18n?.contact.phone}</strong> 646-318-9546
           </li>
           <li class="mb-4">
-            <strong>Email:</strong> contact@example.com
+            <strong>{i18n?.contact.email}</strong> stefjen34@hotmail.com
           </li>
           <li>
-            <strong>Address:</strong> 1234 Street Name, City, State, 12345
+            <strong>{i18n?.contact.address}</strong> Maryland, Va ( virginia) , washignton
           </li>
         </ul>
 
         <!--- map location --->
         <div class="mt-8 lg:mr-8 ">
           
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64405.298989544004!2d-77.09851371100945!3d38.92501219130842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c6de5af6e45b%3A0xc2524522d4885d2a!2sWashington%20D.%20C.%2C%20Distrito%20de%20Columbia%2C%20EE.%20UU.!5e0!3m2!1ses-419!2sar!4v1724119826073!5m2!1ses-419!2sar" class="w-full h-64 lg:h-96 rounded-lg" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64405.298989544004!2d-77.09851371100945!3d38.92501219130842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c6de5af6e45b%3A0xc2524522d4885d2a!2sWashington%20D.%20C.%2C%20Distrito%20de%20Columbia%2C%20EE.%20UU.!5e0!3m2!1ses-419!2sar!4v1724119826073!5m2!1ses-419!2sar" class="w-full h-64 md:flex  lg:h-96 rounded-lg" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
         </div>
         
 

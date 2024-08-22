@@ -1,80 +1,85 @@
 ---
+import Layout from "@/layout/Layout.astro";
 
+import { getI18N } from "@/i18n";
+
+const  { currentLocale = 'en' } = Astro
+const i18n = getI18N({currentLocale});
 
 ---
-
-<section id="services" class="lg:py-12 pb-4 bg-[#fe67c6]">
-  <h1 class="text-3xl font-bold py-28 text-center" > Our Services</h1>
-  
+<Layout title="Services">
+<section id="services" class="lg:py-12 pb-4 bg-[#e6a6ce]">
+  <h1 class="text-3xl font-bold pt-28 pb-12 text-center" > {i18n?.services.title}</h1>
+  <h3 class="text-xl text-gray-800 font-semibold text-center justify-center mx-auto  w-[90%] pb-12">{i18n?.services.subtitle}</h3>
   <style>
     .hidden { display: none; }
   </style>
-<section class="pb-8 bg-[#fe67c6]">
+<section class="pb-8 bg-[#e6a6ce]">
   <div class="w-full max-w-4xl mx-auto">
     <!-- Acordeón Principal -->
     <div class="space-y-4">
       <!-- Sección Classic -->
       <div class="rounded-xl">
-        <button class="relative text-center overflow-hidden text-black shadow-2xl w-full px-4 py-2 text-xl font-semibold bg-[#fbd12d] transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-[#fe67c6] before:duration-300 before:ease-out hover:text-black hover:shadow-[#fbd12d] hover:before:h-40 hover:before:w-full hover:before:opacity-80" type="button" data-target="classic-content">
-         <span class="relative z-10"> Classic Cleaning </span>
+        <button class="relative text-center overflow-hidden text-black shadow-2xl w-full rounded-t-md px-4 py-2 text-xl font-semibold bg-[#e7d486] transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-[#fe67c6] before:duration-300 before:ease-out hover:text-black hover:shadow-[#fbd12d] hover:before:h-40 hover:before:w-full hover:before:opacity-80" type="button" data-target="classic-content">
+         <span class="relative z-10"> {i18n?.services.classic.title} </span>
         </button>
         <div id="classic-content" class="hidden p-4 bg-[#f9f9f9]">
           <div class="space-y-4">
             <!-- Subtítulos Classic -->
             <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="classic-sub1">
-              Limpieza General
+              {i18n?.services.classic.subtitle}
             </button>
             <div id="classic-sub1" class="hidden pl-4 mt-2 bg-white border border-gray-200 rounded-md">
               <ul class=" pl-4 space-y-2 text-gray-800">
-                <li>Limpiar el polvo de los muebles</li>
-                <li>Limpiar el polvo de aparatos grandes (p. ej., TV)</li>
-                <li>Limpiar el polvo a las lámparas</li>
-                <li>Limpiar el polvo a los interruptores de la luz</li>
-                <li>Barrer o pasar la aspiradora en los suelos</li>
-                <li>Vaciar papeleras / basureros</li>
+                <li>{i18n?.services.classic.li1}</li>
+                <li>{i18n?.services.classic.li2}</li>
+                <li>{i18n?.services.classic.li3}</li>
+                <li>{i18n?.services.classic.li4}</li>
+                <li>{i18n?.services.classic.li5}</li>
+                <li>{i18n?.services.classic.li6}</li>
               </ul>
             </div>
       
             <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="classic-sub2">
-              Dormitorio(s)
+               {i18n?.services.classic.subtitle2}
             </button>
             <div id="classic-sub2" class="hidden pl-4 mt-2 bg-white border border-gray-200 rounded-md">
               <ol class=" pl-4 space-y-2 text-gray-800">
-                <li>Hacer las camas</li>
-                <li>Cambiar la ropa de cama (si se proporciona)</li>
-                <li>Limpiar el polvo del cabecero</li>
-                <li>Limpiar el polvo a las lámparas</li>
-                <li>Limpiar el polvo a los interruptores de la luz</li>
+                <li>{i18n?.services.classic.li7}</li>
+                <li>{i18n?.services.classic.li8}</li>
+                <li>{i18n?.services.classic.li9}</li>
+                <li>{i18n?.services.classic.li10}</li>
+                <li>{i18n?.services.classic.li11}</li>
               </ol>
             </div>
       
             <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="classic-sub3">
-              Cuarto(s) de baño
+              {i18n?.services.classic.subtitle3}
             </button>
             <div id="classic-sub3" class="hidden pl-4 mt-2 bg-white border border-gray-200 rounded-md">
               <ol class=" pl-4 space-y-2 text-gray-800">
-                <li>Espejo</li>
-                <li>Fregadero</li>
-                <li>Grifo</li>
-                <li>Encimeras</li>
-                <li>Inodoro / Escusado</li>
-                <li>Bañera/Ducha</li>
-                <li>Área de la ducha / Azulejos de alrededor / Suelos</li>
-                <li>Barra de la ducha / Puerta</li>
-                <li>Grifos / Controles</li>
-                <li>Toalleros</li>
+                <li>{i18n?.services.classic.li12}</li>
+                <li>{i18n?.services.classic.li13}</li>
+                <li>{i18n?.services.classic.li14}</li>
+                <li>{i18n?.services.classic.li15}</li>
+                <li>{i18n?.services.classic.li16}</li>
+                <li>{i18n?.services.classic.li17}</li>
+                <li>{i18n?.services.classic.li18}</li>
+                <li>{i18n?.services.classic.li19}</li>
+                <li>{i18n?.services.classic.li20}</li>
+                <li>{i18n?.services.classic.li21}</li>
               </ol>
             </div>
       
             <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="classic-sub4">
-              Cocina
+              {i18n?.services.classic.subtitle4}
             </button>
             <div id="classic-sub4" class="hidden pl-4 mt-2 bg-white border border-gray-200 rounded-md">
               <ol class=" pl-4 space-y-2 text-gray-800">
-                <li>Encimeras</li>
-                <li>Fregadero</li>
-                <li>Grifo</li>
-                <li>Tapón / Protector de salpicaduras / Azulejos del fregadero</li>
+                <li>{i18n?.services.classic.li22}</li>
+                <li>{i18n?.services.classic.li23}</li>
+                <li>{i18n?.services.classic.li24}</li>
+                <li>{i18n?.services.classic.li25}</li>
               </ol>
             </div>
           </div>
@@ -84,83 +89,87 @@
 
       <!-- Sección Signature -->
       <div class=" rounded-xl">
-        <button class="relative text-center overflow-hidden text-black shadow-2xl w-full px-4 py-2 text-xl font-semibold bg-[#fbd12d] transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-[#fe67c6] before:duration-300 before:ease-out hover:text-black hover:shadow-[#fbd12d] hover:before:h-40 hover:before:w-full hover:before:opacity-80" type="button" data-target="signature-content">
+        <button class="relative text-center overflow-hidden text-black shadow-2xl w-full px-4 py-2 text-xl font-semibold bg-[#e7d486] transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-[#fe67c6] before:duration-300 before:ease-out hover:text-black hover:shadow-[#fbd12d] hover:before:h-40 hover:before:w-full hover:before:opacity-80" type="button" data-target="signature-content">
          <span class="relative z-10">
-          Signature Cleaning
+          {i18n?.services.signature.title}
          </span>
         </button>
-        <div id="signature-content" class="hidden p-4">
+        <div id="signature-content" class="hidden p-4 bg-[#f9f9f9]">
           <div class="space-y-2">
             <!-- Subtítulos Signature -->
             <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="signature-sub1">
-              Limpieza General
+              {i18n?.services.signature.subtitle}
+
             </button>
-            <div id="signature-sub1" class="hidden pl-4">
+            <div id="signature-sub1" class="hidden pl-4 mt-2 bg-white border border-gray-200 rounded-md">
               <ul class=" pl-4">
-                <li>Limpiar el polvo de los muebles</li>
-                <li>Limpiar el polvo de aparatos grandes (p. ej., TV)</li>
-                <li>Limpiar el polvo a las lámparas</li>
-                <li>Limpiar el polvo a los interruptores de la luz</li>
-                <li>Barrer o pasar la aspiradora en los suelos</li>
-                <li>Vaciar papeleras / basureros</li>
-                <li>Barrer los suelos (si es pertinente)</li>
+                <li>{i18n?.services.signature.li26}</li>
+                <li>{i18n?.services.signature.li27}</li>
+                <li>{i18n?.services.signature.li28}</li>
+                <li>{i18n?.services.signature.li29}</li>
+                <li>{i18n?.services.signature.li30}</li>
+                <li>{i18n?.services.signature.li31}</li>
+                <li>{i18n?.services.signature.li32}</li>
               </ul>
             </div>
       
             <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="signature-sub2">
-              Dormitorio(s)
+              <li>{i18n?.services.signature.subtitle2}</li>
+
             </button>
-            <div id="signature-sub2" class="hidden pl-4">
+            <div id="signature-sub2" class="hidden pl-4 mt-2 bg-white border border-gray-200 rounded-md">
               <ul class=" pl-4">
-                <li>Hacer las camas</li>
-                <li>Cambiar la ropa de cama (si se proporciona)</li>
-                <li>Limpiar el polvo del cabecero</li>
-                <li>Limpiar el polvo a las lámparas</li>
-                <li>Limpiar el polvo a los interruptores de la luz</li>
+                <li>{i18n?.services.signature.li33}</li>
+                <li>{i18n?.services.signature.li34}</li>
+                <li>{i18n?.services.signature.li35}</li>
+                <li>{i18n?.services.signature.li36}</li>
+                <li>{i18n?.services.signature.li37}</li>
               </ul>
             </div>
       
             <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="signature-sub3">
-              Cuarto(s) de baño
+              {i18n?.services.signature.subtitle3}
             </button>
-            <div id="signature-sub3" class="hidden pl-4">
+            <div id="signature-sub3" class="hidden pl-4 mt-2 bg-white border border-gray-200 rounded-md">
               <ul class=" pl-4">
-                <li>Espejo</li>
-                <li>Fregadero</li>
-                <li>Grifo</li>
-                <li>Encimeras</li>
-                <li>Inodoro/Escusado</li>
+                <li>{i18n?.services.signature.li38}</li>
+                <li>{i18n?.services.signature.li39}</li>
+                <li>{i18n?.services.signature.li40}</li>
+                <li>{i18n?.services.signature.li41}</li>
+                <li>{i18n?.services.signature.li42}</li>
               </ul>
             </div>
       
             <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="signature-sub4">
-              Bañera/Ducha
+              <li>{i18n?.services.signature.subtitle4}</li>
+
             </button>
-            <div id="signature-sub4" class="hidden pl-4">
+            <div id="signature-sub4" class="hidden pl-4 mt-2 bg-white border border-gray-200 rounded-md">
               <ul class=" pl-4">
-                <li>Área de la ducha / Azulejos de alrededor / Suelos</li>
-                <li>Barra de la ducha / Puerta</li>
-                <li>Grifos / Controles</li>
-                <li>Toalleros</li>
+                <li>{i18n?.services.signature.li43}</li>
+                <li>{i18n?.services.signature.li44}</li>
+                <li>{i18n?.services.signature.li45}</li>
+                <li>{i18n?.services.signature.li46}</li>
               </ul>
             </div>
       
             <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="signature-sub5">
-              Cocina
+              <li>{i18n?.services.signature.subtitle5}</li>
+
             </button>
-            <div id="signature-sub5" class="hidden pl-4">
+            <div id="signature-sub5" class="hidden pl-4 mt-2 bg-white border border-gray-200 rounded-md">
               <ul class=" pl-4">
-                <li>Encimeras</li>
-                <li>Fregadero</li>
-                <li>Grifo</li>
-                <li>Tapón / Protector de salpicaduras / Azulejos del fregadero</li>
-                <li>Cargar el lavavajillas (si ya está vacío)</li>
-                <li>Microondas (Interior y Exterior)</li>
-                <li>Horno / Fogones (Exterior)</li>
-                <li>Frigorífico / Refrigerator (Exterior)</li>
-                <li>Lavavajillas (Exterior)</li>
-                <li>Otros pequeños electrodomésticos (Exterior)</li>
-                <li>Armarios / Gabinetas (Exterior)</li>
+                <li>{i18n?.services.signature.li47}</li>
+                <li>{i18n?.services.signature.li48}</li>
+                <li>{i18n?.services.signature.li49}</li>
+                <li>{i18n?.services.signature.li50}</li>
+                <li>{i18n?.services.signature.li51}</li>
+                <li>{i18n?.services.signature.li52}</li>
+                <li>{i18n?.services.signature.li53}</li>
+                <li>{i18n?.services.signature.li54}</li>
+                <li>{i18n?.services.signature.li55}</li>
+                <li>{i18n?.services.signature.li56}</li>
+                <li>{i18n?.services.signature.li57}</li>
               </ul>
             </div>
           </div>
@@ -168,81 +177,83 @@
       </div>
       <!-- Sección Premium -->
       <div class="rounded-xl">
-        <button class="relative text-center overflow-hidden text-black shadow-2xl w-full px-4 py-2 text-xl font-semibold bg-[#fbd12d] transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-[#fe67c6] before:duration-300 before:ease-out hover:text-black hover:shadow-[#fbd12d] hover:before:h-40 hover:before:w-full hover:before:opacity-80" type="button" data-target="premium-content">
+        <button class="relative text-center overflow-hidden text-black shadow-2xl w-full rounded-b-md px-4 py-2 text-xl font-semibold bg-[#e7d486] transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-[#fe67c6] before:duration-300 before:ease-out hover:text-black hover:shadow-[#fbd12d] hover:before:h-40 hover:before:w-full hover:before:opacity-80" type="button" data-target="premium-content">
          <span class="relative z-10">
-           Premium Cleaning
+          {i18n?.services.premium.title}
           </span>
         </button>
-        <div id="premium-content" class="hidden p-4">
+        <div id="premium-content" class="hidden p-4 bg-[#f9f9f9]">
           <div class="space-y-2">
             <!-- Subtítulos Premium -->
             <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="premium-sub1">
-limpieza general            </button>
-            <div id="premium-sub1" class="hidden pl-4">
-              <ul class=" pl-4">
-                <li>Limpiar el polvo de los muebles</li>
-          <li>Limpiar el polvo de aparatos grandes (p. ej., TV)</li>
-          <li>Limpiar el polvo a las lámparas</li>
-          <li>Limpiar el polvo a los interruptores de la luz</li>
-          <li>Barrer o pasar la aspiradora en los suelos</li>
-          <li>Barrer los suelos (si es pertinente)</li>
-          <li>Limpiar el polvo de las persianas, colgantes de las paredes y decoración</li>
-          <li>Limpiar el polvo a los ventiladores del techo al alcance</li>
-          <li>Limpiar los zócalos</li>
-          <li>Limpiar el alféizar de las ventanas</li>
-          <li>Marcos de las puertas y puertas de cristal interiores</li>
-          <li>Pasar la aspiradora a los tapizados</li>
-          <li>Vaciar papeleras / basureros</li>
-              </ul>
+              {i18n?.services.premium.subtitle}
+            </button>
+            <div id="premium-sub1" class="hidden pl-4 mt-2 bg-white border border-gray-200 rounded-md">
+        <ul class=" pl-4">
+          <li>{i18n?.services.premium.li26}</li>
+          <li>{i18n?.services.premium.li27}</li>
+          <li>{i18n?.services.premium.li28}</li>
+          <li>{i18n?.services.premium.li29}</li>
+          <li>{i18n?.services.premium.li30}</li>
+          <li>{i18n?.services.premium.li31}</li>
+          <li>{i18n?.services.premium.li32}</li>
+          <li>{i18n?.services.premium.li33}</li>
+          <li>{i18n?.services.premium.li34}</li>
+          <li>{i18n?.services.premium.li34}</li>
+          <li>{i18n?.services.premium.li35}</li>
+          <li>{i18n?.services.premium.li36}</li>
+          <li>{i18n?.services.premium.li37}</li>
+        </ul>
             </div>
 
             <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="premium-sub2">
-              Dormitorio
+              {i18n?.services.premium.subtitle1}
             </button>
-            <div id="premium-sub2" class="hidden pl-4">
+            <div id="premium-sub2" class="hidden pl-4 mt-2 bg-white border border-gray-200 rounded-md">
               <ul class=" pl-4">
-                <li>Hacer las camas</li>
-                <li>Cambiar la ropa de cama (si se proporciona)</li>
-                <li>Limpiar el polvo del cabecero</li>
-                <li>Limpiar el polvo a las lámparas</li>
-                <li>Limpiar el polvo a los interruptores de la luz</li>
+                <li>{i18n?.services.premium.li38}</li>
+                <li>{i18n?.services.premium.li39}</li>
+                <li>{i18n?.services.premium.li40}</li>
+                <li>{i18n?.services.premium.li41}</li>
+                <li>{i18n?.services.premium.li42}</li>
               </ul>
             </div>
 
             <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="premium-sub3">
-              Cuarto(s) de baño            </button>
-            <div id="premium-sub3" class="hidden pl-4">
+              {i18n?.services.premium.subtitle2}           </button>
+            <div id="premium-sub3" class="hidden pl-4 mt-2 bg-white border border-gray-200 rounded-md">
               <ul class=" pl-4">
-                <li>Espejo</li>
-                <li>Fregadero</li>
-                <li>Grifo</li>
-                <li>Encimeras</li>
-                <li>Inodoro / Escusado</li>
-                <li>Bañera/Ducha</li>
-                <li>Área de la ducha / Azulejos de alrededor / Suelos</li>
-                <li>Barra de la ducha / Puerta</li>
-                <li>Grifos / Controles</li>
-                <li>Toalleros</li>
-                <li>Frotar los azulejos de la ducha y la lechada</li>
+                <li>{i18n?.services.premium.li43}</li>
+                <li>{i18n?.services.premium.li44}</li>
+                <li>{i18n?.services.premium.li45}</li>
+                <li>{i18n?.services.premium.li46}</li>
+                <li>{i18n?.services.premium.li47}</li>
+                <li>{i18n?.services.premium.li48}</li>
+                <li>{i18n?.services.premium.li49}</li>
+                <li>{i18n?.services.premium.li50}</li>
+                <li>{i18n?.services.premium.li51}</li>
+                <li>{i18n?.services.premium.li52}</li>
+                <li>{i18n?.services.premium.li53}</li>
+                <li>{i18n?.services.premium.li54}</li>
               </ul>
             </div>
 
             <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="premium-sub4">
-              Cocina
+              {i18n?.services.premium.subtitle3}
             </button>
-            <div id="premium-sub4" class="hidden pl-4">
+            <div id="premium-sub4" class="hidden pl-4 mt-2 bg-white border border-gray-200 rounded-md">
               <ul class=" pl-4">
-                <li>Encimeras</li>
-                <li>Fregadero</li>
-                <li>Grifo</li>
-                <li>Tapón/Protector de salpicaduras / Azulejos del fregadero</li>
-                <li>Cargar el lavavajillas (si ya está vacío)</li>
-                <li>Microondas (Interior y Exterior)</li>
-                <li>Horno / Fogones (Exterior)</li>
-                <li>Frigorífico/Refrigerator (Exterior)</li>
-                <li>Lavavajillas (Exterior)</li>
-                <li>Otros pequeños electrodomésticos (Exterior)</li>
-                <li>Armarios / Gabinetas (Exterior)</li>
+                <li>{i18n?.services.premium.li55}</li>
+                <li>{i18n?.services.premium.li56}</li>
+                <li>{i18n?.services.premium.li57}</li>
+                <li>{i18n?.services.premium.li58}</li>
+                <li>{i18n?.services.premium.li59}</li>
+                <li>{i18n?.services.premium.li60}</li>
+                <li>{i18n?.services.premium.li61}</li>
+                <li>{i18n?.services.premium.li62}</li>
+                <li>{i18n?.services.premium.li63}</li>
+                <li>{i18n?.services.premium.li64}</li>
+                <li>{i18n?.services.premium.li65}</li>
               </ul>
             </div>
           </div>
@@ -252,6 +263,7 @@ limpieza general            </button>
   </div>
 </section>
 </section>
+</Layout>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     // Función para manejar el acordeón
