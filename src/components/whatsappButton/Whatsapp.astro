@@ -1,9 +1,16 @@
+---
+import { getI18N } from "@/i18n";
+
+const  { currentLocale = 'en' } = Astro
+const i18n = getI18N({currentLocale});
+
+---
 <button
   class="p-4 sm:mb-3 fixed lg:bottom-28 sm:bottom-10 right-5 z-50 rounded-full hover:transform hover:scale-110 group"
   title="Haz click para mandar un mensaje de WhatsApp"
 >
   <a
-    href="https://api.whatsapp.com/send?phone=+54112345678&text=Hola%20Stef%20stef%20"
+    href="https://api.whatsapp.com/send?phone=+16463189546&text=Hola%20Stef%20stef%20"
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -24,6 +31,6 @@
   <!-- Tooltip -->
   <span
     class="tooltip-text bg-gray-800 text-white text-sm rounded-lg py-1 px-3 absolute right-full mr-2 top-1/2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-    >Manda un mensaje por WhatsApp</span
+    >{i18n?.whatsapp.hover}</span
   >
 </button>

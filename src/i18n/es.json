@@ -7,8 +7,7 @@
     "contact": "Contacto"
   },
   "hero": {
-    "herop": "En",
-    "heropp": "nos especializamos en ofrecer una limpieza profunda y completa. Nuestro equipo de expertos se encarga de todo, desde oficinas y residencias hasta espacios industriales y comerciales. No dejamos ningún rincón sin atender ni detalle sin cuidar.",
+    "herop": "nos especializamos en ofrecer una limpieza profunda y completa. Nuestro equipo de expertos se encarga de todo, desde oficinas y residencias hasta espacios industriales y comerciales. No dejamos ningún rincón sin atender ni detalle sin cuidar.",
     "herop1": "Utilizamos productos y técnicas de alta calidad para garantizar que cada espacio quede impecable, proporcionando un ambiente limpio y seguro. Ya sea que necesites una limpieza profunda , mantenimiento regular o servicios especializados, estamos aquí para cubrir todas tus necesidades.",
     "herop2": "Nos enorgullece adaptarnos a las demandas únicas de cada cliente, superando tus expectativas con resultados excepcionales",
     "herop3": "Confía en Stef para una limpieza sin igual. ¡Nos encargamos de todo para ti!"
@@ -149,6 +148,12 @@
       "li63": "Lavavajillas (Exterior)",
       "li64": "Otros pequeños electrodomésticos (Exterior)",
       "li65": "Armarios / Gabinetas (Exterior)"
+    },
+    "add": {
+      "title": "Complementos",
+      "li1": "limpieza de nevera",
+      "li2": "limpieza del horno",
+      "li3": "organización de ropa"
     }
   },
   "gallery": {
@@ -187,14 +192,14 @@
     "title": "Testimonial",
     "text": "El servicio fue increíble! Nunca había visto mi casa tan limpia. Llegaron a tiempo, fueron súper amables y dejaron todo impecable. Ahora puedo disfrutar de mi casa sin preocuparme por la limpieza. Los recomiendo mucho si buscas un servicio confiable.",
     "name": "Maria G., Homeowner",
-    "occupation": "Residential Customer Testimonial",
 
-    "text2": "Los contratamos para nuestra oficina y estamos muy contentos con los resultados. Son minuciosos, siempre atentos a lo que necesitamos y el servicio al cliente es de primera. Nuestros empleados y clientes han notado la diferencia desde que comenzamos a trabajar con ellos.",
-    "name2": "Luis R., Gerente de oficina",
-    "occupation2": "Corporate Customer Testimonial",
+    "text2": "Excelente servicio, me encantó como dejo mi casa, volvería a contratarla",
+    "name2": "Tifanny S.",
 
     "text3": "Después de una renovación, necesitábamos una limpieza profunda y estos chicos hicieron un trabajo increíble. No solo dejaron todo como nuevo, sino que también usaron productos ecológicos, lo que para nosotros es una gran ventaja. Son rápidos, amables y súper profesionales. ¡Ya los tenemos en nuestra lista para la próxima vez!",
-    "name3": "Andrea S., Homeowner",
-    "occupation3": "Testimonio de un cliente de limpieza profunda"
+    "name3": "Andrea S., Homeowner"
+  },
+  "whatsapp": {
+    "hover": "Enviar un mensaje de WhatsApp"
   }
 }

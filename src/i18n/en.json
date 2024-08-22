@@ -7,8 +7,8 @@
     "contact": "Contact "
   },
   "hero": {
-    "herop": "At",
-    "heropp": "we specialise in providing deep and complete cleaning. Our team of experts takes care of everything from offices and residences to industrial and commercial spaces. We leave no corner unattended and no detail uncared for.",
+    "herop": "The service I offer is quality, making the client always choose us. Our focus as a cleaning company is to satisfy the needs of our clients and offer them a price according to their budget. We offer flexible schedules for the client, 7 days a week and 365 days a year.",
+    "heropp": "",
     "herop1": "We use high-quality products and techniques to ensure that every space is spotless, providing a clean and safe environment. Whether you need deep cleaning, regular maintenance or specialized services, we are here to cover all your needs.",
     "herop2": "We pride ourselves on adapting to each client's unique demands, exceeding your expectations with exceptional results.",
     "herop3": "Trust Stef for unparalleled cleaning. We take care of everything for you!"
@@ -146,6 +146,12 @@
       "li63": "Dishwasher (Outdoor)",
       "li64": "Other Small Appliances (Outdoor)",
       "li65": "Cabinet / Cabinets (Outdoor)"
+    },
+    "add": {
+      "title": "Add Ons",
+      "li1": "fridge cleaning",
+      "li2": "oven cleaning",
+      "li3": "clothing organization"
     }
   },
 
@@ -183,16 +189,13 @@
   },
   "testimonial": {
     "title": "Testimonial",
-    "text": "The service was amazing! I've never seen my house so clean. They showed up on time, were super friendly, and left everything spotless. Now I can enjoy my home without worrying about cleaning. I highly recommend them if you're looking for a reliable service.",
-    "name": "Maria G., Homeowner",
-    "occupation": "Residential Customer Testimonial",
+    "text": "I liked the service. The cleaning of the oven was impeccable, i would definitely hire their services again",
 
-    "text2": "We hired them for our office, and we're really happy with the results. They're thorough, always attentive to what we need, and the customer service is top-notch! Our employees and clients have noticed the difference since we started working with them.",
-    "name2": "Luis R., Office Manager",
-    "occupation2": "Corporate Customer Testimonial",
+    "text2": "excellent service, I loved how she left my house, I would hire her again",
 
-    "text3": "After a renovation, we needed a deep clean, and these guys did an awesome job. Not only did they leave everything looking brand new, but they also used eco-friendly products, which is a big plus for us. They're quick, friendly, and super professional. We've already got them on our list for next time!",
-    "name3": "Andrea S., Homeowner",
-    "occupation3": "Occupation"
+    "text3": "I asked her for the organization of my closet and she left it excellent, with a very good time.. good communication and service"
+  },
+  "whatsapp": {
+    "hover": "Send a WhatsApp message"
   }
 }

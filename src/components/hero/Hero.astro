@@ -3,17 +3,47 @@ import { getI18N } from "@/i18n";
 
 const  { currentLocale = 'en' } = Astro
 const i18n = getI18N({currentLocale});
+
 ---
 
-<section class="py-16 flex items-center justify-center mx-auto w-full min-h-screen relative bg-cover bg-center bg-no-repeat" style="background-image: url('/hero.webp');">
-  <div class="flex mx-auto text-center lg:px-8 bg-black/20 lg:bg-white/80 lg:w-3/4 xl:w-2/3 lg:h-3/4 xl:h-1/2 w-full h-auto justify-center pt-16 lg:pt-10 p-8 lg:rounded-lg relative shadow-lg">
-   
+<section class="py-16 flex items-center justify-center bg-[url('responsivehero.webp')]  mx-auto w-full min-h-screen relative bg-cover bg-center bg-no-repeat" >
+  <div class="flex flex-col items-center justify-center mx-auto text-center lg:px-8 bg-black/20 lg:bg-white/20 lg:w-3/4 xl:w-2/3 lg:h-3/4 xl:h-1/2 w-full h-auto pt-16 lg:pt-10 p-8 lg:rounded-lg relative shadow-lg">
+     <!-- Sección para el título -->
+    <div class="w-full mb-8 justify-center">
+      <h2 class="text-white lg:text-black text-4xl font-bold">
+        <span class="hover-letter">S</span>
+        <span class="hover-letter">t</span>
+        <span class="hover-letter">e</span>
+        <span class="hover-letter">f</span>
+        <span class="hover-letter"> </span>
+        <span class="hover-letter"> </span>
+        <span class="hover-letter">C</span>
+        <span class="hover-letter">l</span>
+        <span class="hover-letter">e</span>
+        <span class="hover-letter">a</span>
+        <span class="hover-letter">n</span>
+        <span class="hover-letter">i</span>
+        <span class="hover-letter">n</span>
+        <span class="hover-letter">g</span>
+        <span class="hover-letter"> </span>
+        <span class="hover-letter"> </span>
+        <span class="hover-letter">S</span>
+        <span class="hover-letter">e</span>
+        <span class="hover-letter">r</span>
+        <span class="hover-letter">v</span>
+        <span class="hover-letter">i</span>
+        <span class="hover-letter">c</span>
+        <span class="hover-letter">e</span>
+        <span class="hover-letter">s</span>
+      </h2>    </div>
+    
     <!-- Sección para el texto en columnas -->
     <div class="flex flex-col lg:flex-row lg:gap-12 gap-8 mt-8">
+
       <!-- Columna 1 -->
       <div class="flex-1 p-6 bg-[#e6a6ce] bg-opacity-80  shadow-md rounded-lg">
         <p class="text-gray-800 leading-relaxed">
-         {i18n?.hero.herop} <span class="text-[#fbd12d] font-bold text-3xl bg-[#e6a6ce] px-2 rounded-md">Stef</span> {i18n?.hero.heropp}
+         {i18n?.hero.herop}
         </p>
       </div>
       <!-- Columna 2 -->
@@ -36,3 +66,38 @@ const i18n = getI18N({currentLocale});
     </div>
   </div>
 </section>
+<style>
+  .hover-letter {
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .hover-letter:hover {
+    color: #e6a6ce;
+    transform: scale(1.2 ); /* Color rosa para hover */
+  }
+  
+  /* Aplicar un retraso en la transición para que cada letra cambie secuencialmente */
+  .hover-letter:nth-child(1) { transition-delay: 0s; }
+  .hover-letter:nth-child(2) { transition-delay: 0.s; }
+  .hover-letter:nth-child(3) { transition-delay: 0s; }
+  .hover-letter:nth-child(4) { transition-delay: 0s; }
+  .hover-letter:nth-child(5) { transition-delay: 0s; }
+  .hover-letter:nth-child(6) { transition-delay: 0s; }
+  .hover-letter:nth-child(7) { transition-delay: 0s; }
+  .hover-letter:nth-child(8) { transition-delay: 0s; }
+  .hover-letter:nth-child(9) { transition-delay: 0s; }
+  .hover-letter:nth-child(10) { transition-delay: 0s; }
+  .hover-letter:nth-child(11) { transition-delay: 0s; }
+  .hover-letter:nth-child(12) { transition-delay: 0s; }
+  .hover-letter:nth-child(13) { transition-delay: 0s; }
+  .hover-letter:nth-child(14) { transition-delay: 0s; }
+  .hover-letter:nth-child(15) { transition-delay: 0s; }
+  .hover-letter:nth-child(16) { transition-delay: 0s; }
+  .hover-letter:nth-child(17) { transition-delay: 0s; }
+  .hover-letter:nth-child(18) { transition-delay: 0s; }
+  .hover-letter:nth-child(19) { transition-delay: 0s; }
+  .hover-letter:nth-child(20) { transition-delay: 0s; }
+  .hover-letter:nth-child(21) { transition-delay: 0s; }
+  .hover-letter:nth-child(22) { transition-delay: 0s; }
+  </style>

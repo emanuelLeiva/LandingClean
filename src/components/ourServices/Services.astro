@@ -23,7 +23,7 @@ const i18n = getI18N({currentLocale});
         <button class="relative text-center overflow-hidden text-black shadow-2xl w-full rounded-t-md px-4 py-2 text-xl font-semibold bg-[#e7d486] transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-[#fe67c6] before:duration-300 before:ease-out hover:text-black hover:shadow-[#fbd12d] hover:before:h-40 hover:before:w-full hover:before:opacity-80" type="button" data-target="classic-content">
          <span class="relative z-10"> {i18n?.services.classic.title} </span>
         </button>
-        <div id="classic-content" class="hidden p-4 bg-[#f9f9f9]">
+        <div id="classic-content" class="hidden p-4 rounded-b-lg bg-[#f9f9f9]">
           <div class="space-y-4">
             <!-- Subtítulos Classic -->
             <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="classic-sub1">
@@ -85,8 +85,6 @@ const i18n = getI18N({currentLocale});
           </div>
         </div>
       </div>
-      
-
       <!-- Sección Signature -->
       <div class=" rounded-xl">
         <button class="relative text-center overflow-hidden text-black shadow-2xl w-full px-4 py-2 text-xl font-semibold bg-[#e7d486] transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-[#fe67c6] before:duration-300 before:ease-out hover:text-black hover:shadow-[#fbd12d] hover:before:h-40 hover:before:w-full hover:before:opacity-80" type="button" data-target="signature-content">
@@ -94,7 +92,7 @@ const i18n = getI18N({currentLocale});
           {i18n?.services.signature.title}
          </span>
         </button>
-        <div id="signature-content" class="hidden p-4 bg-[#f9f9f9]">
+        <div id="signature-content" class="hidden p-4 rounded-b-lg bg-[#f9f9f9]">
           <div class="space-y-2">
             <!-- Subtítulos Signature -->
             <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="signature-sub1">
@@ -114,7 +112,7 @@ const i18n = getI18N({currentLocale});
             </div>
       
             <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="signature-sub2">
-              <li>{i18n?.services.signature.subtitle2}</li>
+              {i18n?.services.signature.subtitle2}
 
             </button>
             <div id="signature-sub2" class="hidden pl-4 mt-2 bg-white border border-gray-200 rounded-md">
@@ -141,7 +139,7 @@ const i18n = getI18N({currentLocale});
             </div>
       
             <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="signature-sub4">
-              <li>{i18n?.services.signature.subtitle4}</li>
+              {i18n?.services.signature.subtitle4}
 
             </button>
             <div id="signature-sub4" class="hidden pl-4 mt-2 bg-white border border-gray-200 rounded-md">
@@ -154,7 +152,7 @@ const i18n = getI18N({currentLocale});
             </div>
       
             <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="signature-sub5">
-              <li>{i18n?.services.signature.subtitle5}</li>
+              {i18n?.services.signature.subtitle5}
 
             </button>
             <div id="signature-sub5" class="hidden pl-4 mt-2 bg-white border border-gray-200 rounded-md">
@@ -177,12 +175,12 @@ const i18n = getI18N({currentLocale});
       </div>
       <!-- Sección Premium -->
       <div class="rounded-xl">
-        <button class="relative text-center overflow-hidden text-black shadow-2xl w-full rounded-b-md px-4 py-2 text-xl font-semibold bg-[#e7d486] transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-[#fe67c6] before:duration-300 before:ease-out hover:text-black hover:shadow-[#fbd12d] hover:before:h-40 hover:before:w-full hover:before:opacity-80" type="button" data-target="premium-content">
+        <button class="relative text-center overflow-hidden text-black shadow-2xl w-full px-4 py-2 text-xl font-semibold bg-[#e7d486] transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-[#fe67c6] before:duration-300 before:ease-out hover:text-black hover:shadow-[#fbd12d] hover:before:h-40 hover:before:w-full hover:before:opacity-80" type="button" data-target="premium-content">
          <span class="relative z-10">
           {i18n?.services.premium.title}
           </span>
         </button>
-        <div id="premium-content" class="hidden p-4 bg-[#f9f9f9]">
+        <div id="premium-content" class="hidden p-4 rounded-b-lg bg-[#f9f9f9]">
           <div class="space-y-2">
             <!-- Subtítulos Premium -->
             <button class="w-full px-4 py-2 text-lg font-semibold text-left bg-[#fe67c6] text-white hover:bg-[#e54c9c] focus:outline-none transition-colors duration-300 ease-in-out rounded-md" type="button" data-target="premium-sub1">
@@ -257,6 +255,26 @@ const i18n = getI18N({currentLocale});
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+      <!-- Add Ons -->
+      <div class="rounded-xl">
+        <button class="relative text-center overflow-hidden text-black shadow-2xl rounded-b-md w-full px-4 py-2 text-xl font-semibold bg-[#e7d486] transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-[#fe67c6] before:duration-300 before:ease-out hover:text-black hover:shadow-[#fbd12d] hover:before:h-40 hover:before:w-full hover:before:opacity-80" type="button" data-target="add-content">
+          <span class="relative z-10">
+            <h1>{i18n?.services.add.title}</h1>
+          </span>
+         </button>
+         <div id="add-content" class="hidden p-4 bg-[#f9f9f9] rounded-b-lg">
+          <div class="space-y-2">
+            <!-- Contenido de Add Ons -->
+            <ul class="pl-4 flex gap-4 mt-2 mx-auto bg-white  justify-center ">
+              <li class="border border-gray-200 text-white text-center bg-[#fe67c6] rounded-md p-2">{i18n?.services.add.li1}</li>
+              <li class="border border-gray-200 text-white text-center bg-[#fe67c6] rounded-md p-2">{i18n?.services.add.li2}</li>
+              <li class="border border-gray-200 text-white text-center bg-[#fe67c6] rounded-md p-2">{i18n?.services.add.li3}</li>
+
+            </ul>
+          </div>
+        </div>
         </div>
       </div>
     </div>
