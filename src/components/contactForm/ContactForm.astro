@@ -37,29 +37,41 @@ const i18n = getI18N({currentLocale});
     </div>
 
     <form id="form" class="w-full h-full mx-auto bg-[#e6a6ce]  rounded-lg px-8 py-4">
-        <div class="mb-6">
-            <label for="from_name" class="block text-gray-700 font-bold mb-2">{i18n?.contactForm.name}</label>
-            <input type="text" name="from_name" id="from_name" placeholder={i18n?.contactForm.pname} class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#fbd12d]" >
-            <small id="from_name_error" class="text-red-500 hidden">{i18n?.contactForm.pname}</small>
+        <div class="field mb-6" >
+          <label for="from_name" class="block text-gray-700 font-bold mb-2">{i18n?.contactForm.name}</label>
+          <input type="text" name="from_name" id="from_name" placeholder={i18n?.contactForm.pname} class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#fbd12d]">
+          <small id="from_name_error" class="text-red-500 hidden">{i18n?.contactForm.pname}</small>
         </div>
 
-        <div class="mb-6">
-            <label for="email_id" class="block text-gray-700 font-bold mb-2">{i18n?.contactForm.email}</label>
-            <input type="email" name="email_id" id="email_id" placeholder={i18n?.contactForm.pemail} class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#fbd12d]" >
-            <small id="email_id_error" class="text-red-500 hidden">Please {i18n?.contactForm.pemail}</small>
+        
+        <div class="field mb-6" >
+          <label for="email_id" class="block text-gray-700 font-bold mb-2">{i18n?.contactForm.email}</label>
+          <input type="text" name="email_id" id="email_id" placeholder={i18n?.contactForm.pemail} class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#fbd12d]">
+          <small id="email_id_error" class="text-red-500 hidden">Please {i18n?.contactForm.pemail}</small>
+        </div>
+
+
+        <div class="field mb-6" >
+          <label for="message" class="block text-gray-700 font-bold mb-2">{i18n?.contactForm.message}</label>
+          <textarea name="message" id="message" rows="4" placeholder={i18n?.contactForm.pmessage} class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#fbd12d]" ></textarea>
+          <small id="message_error" class="text-red-500 hidden">Please {i18n?.contactForm.pmessage}</small>
         </div>
        
-        <div class="mb-6">
-            <label for="message" class="block text-gray-700 font-bold mb-2">{i18n?.contactForm.message}</label>
-            <textarea name="message" id="message" rows="4" placeholder={i18n?.contactForm.pmessage} class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#fbd12d]" ></textarea>
-            <small id="message_error" class="text-red-500 hidden">Please {i18n?.contactForm.pmessage}</small>
-        </div>
-        <button type="submit" id="button" class="relative text-center overflow-hidden text-black shadow-2xl w-full rounded-t-md px-4 py-2 text-xl font-semibold bg-[#e7d486] transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-[#fe67c6] before:duration-300 before:ease-out hover:text-black hover:shadow-[#fbd12d] hover:before:h-40 hover:before:w-full hover:before:opacity-80">
-        <span class="relative z-10">    
-        {i18n?.contactForm.submit}
-        </span>
-    </button>
-    </form>
+      
+        <button type="submit" id="button" class="relative text-center overflow-hidden text-black shadow-2xl w-full rounded-t-md px-4 py-2 text-xl font-semibold bg-[#e7d486] transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-[#fe67c6] before:duration-300 before:ease-out hover:text-black hover:shadow-[#fbd12d] hover:before:h-40 hover:before:w-full hover:before:opacity-80" value="Send Email" >
+            <span class="relative z-10">    
+                {i18n?.contactForm.submit}
+                </span>
+            </button>
+      </form>
+      
+      <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+      
+      <script type="text/javascript">
+        emailjs.init('pnz19DsMTQE7hinOv')
+      </script>
+    
 </section>
 
 
@@ -67,81 +79,76 @@ const i18n = getI18N({currentLocale});
 
 <script>
     declare const emailjs: any;
-
-const btn = document.getElementById('button') as HTMLButtonElement | null;
-const form = document.getElementById('form') as HTMLFormElement | null;
-const successAlert = document.getElementById('success-alert') as HTMLDivElement | null;
-const errorAlert = document.getElementById('error-alert') as HTMLDivElement | null;
-
-if (form && btn && successAlert && errorAlert) {
-    form.addEventListener('submit', function(event: Event) {
-        event.preventDefault();
-
-    // Validación personalizada
-
-    // Inicializar estado de error
-    let hasError = false;
-
-    // Validación del nombre
-    const name = form.querySelector('[name="from_name"]') as HTMLInputElement | null;
-    if (name && !name.value.trim()) {
-            document.getElementById('from_name_error')?.classList.remove('hidden');
-            hasError = true;
-        } else {
-            document.getElementById('from_name_error')?.classList.add('hidden');
-        }
-
-    // Validación del correo electrónico
-    const email = form.querySelector('[name="email_id"]') as HTMLInputElement | null;
-
-    if (email && (!email.value.trim() || !validateEmail(email.value.trim()))) {
-            document.getElementById('email_id_error')?.classList.remove('hidden');
-            hasError = true;
-        } else {
-            document.getElementById('email_id_error')?.classList.add('hidden');
-        }
-
-    // Validación del mensaje
-    const message = form.querySelector('[name="message"]') as HTMLTextAreaElement | null;
-
-    if (message && !message.value.trim()) {
-            document.getElementById('message_error')?.classList.remove('hidden');
-            hasError = true;
-        } else {
-            document.getElementById('message_error')?.classList.add('hidden');
-        }
-
-    // Si hay errores, detener el envío
-    if (hasError) {
-            return;
-        }
     
-
-    // Si no hay errores, enviar el formulario
-    btn.textContent = 'Sending...';
-
-    const serviceID = 'default_service';
-    const templateID = 'template_hkkyd9d';
-
-    emailjs.sendForm(serviceID, templateID, this)
-        .then(() => {
-            btn.textContent = 'Send Email';
-            successAlert.classList.remove('hidden'); // Mostrar alerta de éxito
-            errorAlert.classList.add('hidden'); // Ocultar alerta de error, si estuviera visible
-            form.reset(); // Borrar lo escrito en los inputs
-        }, (err: any) => {
-            btn.textContent = 'Send Email';
-            errorAlert.classList.remove('hidden'); // Mostrar alerta de error
-            successAlert.classList.add('hidden'); // Ocultar alerta de éxito, si estuviera visible
+    const btn = document.getElementById('button') as HTMLButtonElement | null;
+    const form = document.getElementById('form') as HTMLFormElement | null;
+    const successAlert = document.getElementById('success-alert') as HTMLDivElement | null;
+    const errorAlert = document.getElementById('error-alert') as HTMLDivElement | null;
+    
+    if (form && btn && successAlert && errorAlert) {
+        form.addEventListener('submit', function(event: Event) {
+            event.preventDefault();
+    
+            // Validación personalizada
+            let hasError = false;
+    
+            // Validación del nombre
+            const name = form.querySelector('[name="from_name"]') as HTMLInputElement | null;
+            const nameError = document.getElementById('from_name_error') ;
+            if (name && !name.value.trim()) {
+                nameError?.classList.remove('hidden');
+                hasError = true;
+            } else {
+                nameError?.classList.add('hidden');
+            }
+    
+            // Validación del email
+            const email = form.querySelector('[name="email_id"]') as HTMLInputElement | null;
+            const emailError = document.getElementById('email_id_error') ;
+            if (email && (!email.value.trim() || !validateEmail(email.value))) {
+                emailError?.classList.remove('hidden');
+                hasError = true;
+            } else {
+                emailError?.classList.add('hidden');
+            }
+    
+            // Validación del mensaje
+            const message = form.querySelector('[name="message"]') as HTMLTextAreaElement | null;
+            const messageError = document.getElementById('message_error') ;
+            if (message && !message.value.trim()) {
+                messageError?.classList.remove('hidden');
+                hasError = true;
+            } else {
+                messageError?.classList.add('hidden');
+            }
+    
+            if (hasError) {
+                return;
+            }
+    
+            btn.textContent = 'Sending...';
+    
+            const serviceID = 'default_service';
+            const templateID = 'template_jhcdo78';
+    
+            emailjs.sendForm(serviceID, templateID, form)
+                .then(() => {
+                    btn.textContent = 'Send Email';
+                    successAlert.classList.remove('hidden'); // Mostrar alerta de éxito
+                    errorAlert.classList.add('hidden'); // Ocultar alerta de error
+                    form.reset(); // Borrar lo escrito en los inputs
+                }, (err: any) => {
+                    btn.textContent = 'Send Email';
+                    errorAlert.classList.remove('hidden'); // Mostrar alerta de error
+                    successAlert.classList.add('hidden'); // Ocultar alerta de éxito
+                });
         });
-});
-
-}
-
-// Función para validar un email
-function validateEmail(email: string): boolean {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-}
-
-</script>
+    
+        // Función para validar un email
+        function validateEmail(email: string) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+    }
+    </script>
+    
